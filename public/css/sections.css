@@ -9,7 +9,7 @@ html {
 
 /* === BODY === */
 body {
-    margin: 0% 5% 5% 5%;
+    margin: 0% 5%;
     min-height: 100vh;
     background-color: var(--home-bckg);
     position: relative;
@@ -94,6 +94,11 @@ section {
     text-align: center;
 }
 
+/* --- About Projects --- */
+#about {
+    left: 10%;
+    margin: 30% 7% 0% 7%;
+}
 
 /* --- Personal Projects --- */
 #personal-projects {
@@ -111,7 +116,7 @@ section {
 /* --- College Projects --- */
 #college-projects {
     left: 10%;
-    margin: 4% 7%;
+    margin: 5% 7%;
 }
 
 #college-projects h2 {
@@ -119,9 +124,12 @@ section {
 }
 
 
-/* --- About Projects --- */
-#about {
-    left: 10%;
-    margin: 30% 7% 0% 7%;
+/* === FOOTER === */
+footer {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 

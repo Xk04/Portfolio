@@ -32,6 +32,8 @@
     /* Sections */
     --title-section-font: "Inter", sans-serif;
     --middle-line-width: 400px;
+    --middle-line-width-s: 300px;
+    --middle-line-width-xs: 250px;
 
     /* Texts */
     --text-font-prm: "Telex";
