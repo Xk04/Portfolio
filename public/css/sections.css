@@ -1,0 +1,127 @@
+/* === HTML === */
+html {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color-prm);
+    scroll-behavior: var(--scroll-behavior);
+}
+
+
+/* === BODY === */
+body {
+    margin: 0% 5% 5% 5%;
+    min-height: 100vh;
+    background-color: var(--home-bckg);
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        radial-gradient(ellipse 140% 50% at 15% 60%, rgba(124, 58, 237, 0.11), transparent 48%),
+        radial-gradient(ellipse 90% 80% at 85% 25%, rgba(245, 101, 101, 0.09), transparent 58%),
+        radial-gradient(ellipse 120% 65% at 40% 90%, rgba(34, 197, 94, 0.13), transparent 52%),
+        radial-gradient(ellipse 100% 45% at 70% 5%, rgba(251, 191, 36, 0.07), transparent 42%),
+        radial-gradient(ellipse 80% 75% at 90% 80%, rgba(168, 85, 247, 0.10), transparent 55%),
+        #000000;
+
+    filter: blur(var(--blur-big));
+    transform: scale(1.1);
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+/* === HEADER === */
+header {
+    top: 0%;
+    padding: 0.5% 5% 0% 1%;
+    position: sticky;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    backdrop-filter: blur(var(--blur-little));
+    border-radius: var(--radius-m);
+    z-index: 100;
+}
+
+
+header div {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 50%;
+}
+
+
+/* === MAIN === */
+main {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+section {
+    scroll-margin-top: var(--scroll-margin-top);
+}
+
+
+
+#home {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+    scroll-margin-top: 0px;
+}
+
+/* --- Presentation --- */
+#presentation {
+    margin-top: 18%;
+    text-align: center;
+}
+
+
+/* --- Personal Projects --- */
+#personal-projects {
+    left: 10%;
+    margin: 10% 7%;
+    margin-top: 30%;
+    
+}
+
+#personal-projects h2 {
+    text-align: center;
+}
+
+
+/* --- College Projects --- */
+#college-projects {
+    left: 10%;
+    margin: 4% 7%;
+}
+
+#college-projects h2 {
+    text-align: center;
+}
+
+
+/* --- About Projects --- */
+#about {
+    left: 10%;
+    margin: 30% 7% 0% 7%;
+}
+

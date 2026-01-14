@@ -1,0 +1,99 @@
+:root {
+    /* colors */
+    --home-bckg: #000000;
+
+    --header-bckg: rgba(0, 0, 0, 0.9);
+    --header-shadow: 0px 0px 40px 40px;
+    
+    --text-color-prm: #ffffff;
+    --text-color-sdr: #000000;
+
+    /* Titles */
+    --title-font: "Arimo";
+
+    --title-size-xxs-sdr: 0.55em;
+    --title-size-xs: 1.5em;
+    --title-size-s: 1.8em;
+    --title-size-m: 2em;
+    --title-size-l: 2.3em;
+    --title-size-xl: 2.5em;
+    --title-size-xxl: 3em;
+    --title-size-3xl: 4em;
+
+    --title-weight-s: 100;
+    --title-weight-m: 200;
+    --title-weight-l: 400;
+    --title-weight-xl: 600;
+    
+    /* Header */
+    --header-font: "Arimo";
+    --a-gap: 30%;
+
+    /* Sections */
+    --title-section-font: "Inter", sans-serif;
+    --middle-line-width: 400px;
+
+    /* Texts */
+    --text-font-prm: "Telex";
+    --text-font-sdr: "Time New Roman", sans-serif;
+
+    --text-size-xxs: 0.8em;
+    --text-size-xs: 1em;
+    --text-size-s: 1.3em;
+    --text-size-m: 1.5em;
+    --text-size-l: 1.8em;
+    --text-size-xl: 2em;
+
+    --text-weight-s: 100;
+    --text-weight-m: 200;
+    --text-weight-l: 400;
+    --text-weight-xl: 600;
+
+    /* Projects */
+    --box-height: 300px;
+    --project-background-color: rgba(255, 255, 255, 0.08);
+
+    --panel-pos-top: 52%;
+    --panel-pos-left: 50%;
+
+    --panel-width: 75%;
+    --panel-height: 80%;
+
+
+    /* Global */
+    --transition-duration: 0.5s;
+    --radius-xs: 5px;
+    --radius-s: 10px;
+    --radius-m: 15px;
+    --radius-m: 20px;
+    --radius-xl: 25px;
+
+    --blur-little: 3px;
+    --blur-medium: 14px;
+    --blur-big: 40px;
+
+    /* Scroll params */
+    --scroll-behavior: smooth;
+    --scroll-margin-top: 200px;
+}
+
+
+@font-face {
+    font-family: "Arimo";
+    src: url("../fonts/Arimo-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Telex";
+    src: url("../fonts/Telex-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Hegarty";
+    src: url("../fonts/BBHHegarty-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Gravitas";
+    src: url("../fonts/GravitasOne-Regular.ttf");
+}
