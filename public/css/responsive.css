@@ -1,107 +1,90 @@
-/* Tablets et écrans moyens */
+/* === 1. Corrections Globales (Hors Media Queries) === */
+#presentation p {
+    font-size: var(--text-size-m);
+    line-height: 1.5; /* Fix: évite que les lignes se chevauchent */
+    text-wrap: pretty;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* === 2. Tablettes et Écrans Moyens (1024px) === */
 @media (max-width: 1024px) {
-    :root {
-
-    }
-
     header div {
-        gap: 20%;
+        gap: 10%; /* Réduit pour éviter que ça sorte de l'écran */
     }
 
     .arrow {
-        margin-top: 40%;
+        margin-top: 10vh; /* Utilisation de vh pour un espacement vertical constant */
     }
 
-    /* --- Presentation --- */
     #presentation {
-        margin-top: 30%;
+        margin-top: 15vh;
+        padding: 0 5%;
     }
 
-    /* --- About Projects --- */
     #about {
-        left: 10%;
-        margin: 30% 7% 30% 7%;
+        margin: 10vh 5%;
+        width: auto;
+        left: 0; /* Reset du décalage manuel */
     }
 
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
-
 }
 
-/* Mobile et petits écrans */
+/* === 3. Mobile (768px) === */
 @media (max-width: 768px) {
-    body {
-        margin: 0% 3% 10% 3%;
-    }
-
-
     header div {
-        display: none;
-    }
-
-    .arrow {
-        margin-top: 30%;
-    }
-
-    /* --- Presentation --- */
-    #presentation {
-        margin-top: 30%;
-    }
-
-    /* --- About Projects --- */
-    #about {
-        left: 10%;
-        margin: 30% 7% 30% 7%;
-    }
-
-    .projects-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-/* Très petits écrans */
-@media (max-width: 480px) {
-    body {
-        margin: 0% 4% 10% 4%;
-    }
-
-    header div {
-        display: none;
-    }
-
-    .arrow {
-        margin-top: 50%;
-    }
-
-    /* --- Presentation --- */
-    #presentation {
-        margin-top: 40%;
+        display: none; /* Cache les éléments du menu comme souhaité */
     }
 
     #presentation h2 {
-        font-size: var(--title-size-xxl);
+        font-size: var(--title-size-xl);
+    }
+
+    /* On passe les projets sur une seule colonne pour la lisibilité */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-preview {
+        height: auto; /* Permet au contenu de s'adapter sur petit écran */
+        padding: 20px;
+    }
+}
+
+/* === 4. Très petits écrans (480px) === */
+@media (max-width: 480px) {
+    body {
+        margin: 0 5% 5% 5%;
+    }
+
+    #presentation {
+        margin-top: 20vh;
+    }
+
+    #presentation h2 {
+        font-size: var(--title-size-l);
+    }
+
+    #presentation h2::after {
+        width: 50px; /* Au lieu de 0, on la réduit pour garder le style */
     }
 
     #presentation p {
         font-size: var(--text-size-s);
+        line-height: 1.4;
     }
 
-    #presentation h2::after {
-        width: var(--middle-line-width-xs);
+    .arrow {
+        margin-top: 15vh;
     }
 
-    /* --- About Projects --- */
     #about {
-        left: 10%;
-        margin: 50% 7% 50% 7%;
-    }
-
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .projects-grid {
-        grid-template-columns: repeat(1, 1fr);
+        margin: 15vh 0;
     }
 }
