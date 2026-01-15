@@ -1,3 +1,4 @@
+/* === Variables === */
 :root {
     /* colors */
     --home-bckg: #000000;
@@ -32,8 +33,9 @@
     /* Sections */
     --title-section-font: "Inter", sans-serif;
     --middle-line-width: 400px;
-    --middle-line-width-s: 300px;
-    --middle-line-width-xs: 250px;
+    --middle-line-width-m: 350px;
+    --middle-line-width-s: 150px;
+    --middle-line-width-xs: 50px;
 
     /* Texts */
     --text-font-prm: "Telex";
@@ -71,15 +73,15 @@
     --radius-xl: 25px;
 
     --blur-little: 3px;
-    --blur-medium: 14px;
-    --blur-big: 40px;
+    --blur-medium: 8px;
+    --blur-big: 30px;
 
     /* Scroll params */
     --scroll-behavior: smooth;
     --scroll-margin-top: 200px;
 }
 
-
+/* === Fonts === */
 @font-face {
     font-family: "Arimo";
     src: url("../fonts/Arimo-VariableFont_wght.ttf");
@@ -98,4 +100,42 @@
 @font-face {
     font-family: "Gravitas";
     src: url("../fonts/GravitasOne-Regular.ttf");
+}
+
+
+/* === Animations === */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-6px);
+    }
+    60% {
+        transform: translateY(-4px);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* === Global classes === */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }

@@ -13,6 +13,23 @@ class App {
         this.setUpEvents();
     }
 
+    smoothScroll() {
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+        }, {
+            threshold: 0.3
+        });
+
+        document.querySelectorAll('section, .project-preview').forEach((el) => {
+            el.classList.add('reveal');
+            observer.observe(el);
+        });
+    }
+
     setUpEvents() {
         this.closeBtns.forEach((btn, i) => {
             btn.addEventListener('click', () => {
@@ -34,6 +51,7 @@ class App {
                 document.body.style.overflow = 'auto';
             });
         });
+        this.smoothScroll();
         }
 }
 

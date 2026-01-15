@@ -1,90 +1,129 @@
-/* === 1. Corrections Globales (Hors Media Queries) === */
-#presentation p {
-    font-size: var(--text-size-m);
-    line-height: 1.5; /* Fix: évite que les lignes se chevauchent */
-    text-wrap: pretty;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* === 2. Tablettes et Écrans Moyens (1024px) === */
+/* === Tablettes et Écrans Moyens === */
 @media (max-width: 1024px) {
     header div {
-        gap: 10%; /* Réduit pour éviter que ça sorte de l'écran */
+        gap: 20%;
     }
 
     .arrow {
-        margin-top: 10vh; /* Utilisation de vh pour un espacement vertical constant */
+        margin-top: 30%;
     }
 
+    /* --- Presentation --- */
     #presentation {
-        margin-top: 15vh;
+        margin-top: 30%;
         padding: 0 5%;
     }
 
+    #presentation h2::after {
+        width: var(--middle-line-width-m);
+    }
+
+    /* --- About --- */
     #about {
-        margin: 10vh 5%;
-        width: auto;
-        left: 0; /* Reset du décalage manuel */
+        left: 10%;
+        margin: 50% 7% 50% 7%;
     }
 
-    .projects-grid {
+    /* --- Projects --- */
+    .projects-grid-selection {
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
     }
 }
 
-/* === 3. Mobile (768px) === */
+
+
+/* === Mobile === */
 @media (max-width: 768px) {
-    header div {
-        display: none; /* Cache les éléments du menu comme souhaité */
-    }
-
-    #presentation h2 {
-        font-size: var(--title-size-xl);
-    }
-
-    /* On passe les projets sur une seule colonne pour la lisibilité */
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .project-preview {
-        height: auto; /* Permet au contenu de s'adapter sur petit écran */
-        padding: 20px;
-    }
-}
-
-/* === 4. Très petits écrans (480px) === */
-@media (max-width: 480px) {
     body {
-        margin: 0 5% 5% 5%;
+        margin: 0% 7% 15% 7%;
     }
 
+    header div {
+        display: none;
+    }
+
+    .arrow {
+        margin-top: 30%;
+    }
+
+    /* --- Presentation --- */
     #presentation {
-        margin-top: 20vh;
+        margin-top: 30%;
+        padding: 0 5%;
     }
 
     #presentation h2 {
-        font-size: var(--title-size-l);
+        line-height: 1.5;
     }
 
     #presentation h2::after {
-        width: 50px; /* Au lieu de 0, on la réduit pour garder le style */
+        width: var(--middle-line-width-s);
+    }
+
+    #presentation p {
+        line-height: 1.5;
+    }
+
+    /* --- About --- */
+    #about {
+        left: 10%;
+        margin: 50% 7% 50% 7%;
+    }
+
+    /* --- Projects --- */
+    .projects-grid-selection {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+/* === Petits écrans === */
+@media (max-width: 480px) {
+    body {
+        margin: 0% 5% 20% 5%;
+    }
+
+    header div {
+        display: none;
+    }
+
+    .arrow {
+        margin-top: 70%;
+    }
+
+    /* --- Presentation --- */
+    #presentation {
+        margin-top: 40%;
+    }
+
+    #presentation h2 {
+        font-size: var(--title-size-xxl);
+        line-height: 1.5;
     }
 
     #presentation p {
         font-size: var(--text-size-s);
-        line-height: 1.4;
+        line-height: 1.5;
     }
 
-    .arrow {
-        margin-top: 15vh;
+    #presentation h2::after {
+        width: var(--middle-line-width-xs);
     }
 
+    /* --- About --- */
     #about {
-        margin: 15vh 0;
+        left: 10%;
+        margin: 50% 7% 50% 7%;
+    }
+
+    /* --- Projects --- */
+    .projects-grid-selection {
+        grid-template-columns: repeat(1, 1fr);
+        flex-direction: column;
+    }
+
+    .close-project img {
+        width: 200%;
     }
 }
