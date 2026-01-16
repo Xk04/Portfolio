@@ -94,7 +94,7 @@
 
     /* --- Presentation --- */
     #presentation {
-        margin-top: 40%;
+        margin-top: 50%;
     }
 
     #presentation h2 {
@@ -108,7 +108,7 @@
     }
 
     #presentation h2::after {
-        width: var(--middle-line-width-xs);
+        width: 0;
     }
 
     /* --- About --- */

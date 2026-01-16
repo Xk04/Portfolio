@@ -55,7 +55,7 @@
 
     /* Projects */
     --box-height: 300px;
-    --project-background-color: rgba(255, 255, 255, 0.08);
+    --project-background-color: rgba(255, 255, 255, 0.06);
 
     --panel-pos-top: 52%;
     --panel-pos-left: 50%;
@@ -73,7 +73,7 @@
     --radius-xl: 25px;
 
     --blur-little: 3px;
-    --blur-medium: 8px;
+    --blur-medium: 3px;
     --blur-big: 30px;
 
     /* Scroll params */

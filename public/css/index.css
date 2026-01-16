@@ -122,6 +122,37 @@ section p {
 }
 
 
+/* === About === */
+
+.about-content {
+    background-color: rgba(255, 255, 255, 0.02);
+    backdrop-filter: var(--blur-big);
+}
+
+.profil img {
+    width: 15%;
+    height: 15%;
+    object-fit: cover;
+    border-radius: var(--radius-m);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
+    opacity: 0.85;
+}
+
+.profil h4 {
+    font-size: var(--title-size-s);
+    font-family: var(--title-font);
+    font-weight: var(--title-weight-s);
+    line-height: 0;
+}
+
+.profil p {
+    font-size: var(--text-size-xs);
+    font-family: var(--title-font);
+    font-weight: var(--title-weight-s);
+    line-height: 0;
+}
+
+
 /* === Project Preview === */
 .projects-grid-selection {
     display: grid;
@@ -137,17 +168,19 @@ section p {
 
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     color: var(--text-color-prm);
 
     background: var(--project-background-color);
-    backdrop-filter: blur(var(--blur-medium)) saturate(120%);
-    -webkit-backdrop-filter: blur(var(--blur-medium)) saturate(120%);
+    backdrop-filter: blur(var(--blur-medium)) saturate(80%);
+    -webkit-backdrop-filter: blur(var(--blur-medium)) saturate(80%);
 
-    border-radius: var(--radius-s);
+    border-radius: var(--radius-m);
+    border: 2px solid rgba(0,0,0,0.6);
 
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
-    box-shadow: inset 0px 5px 100px -100px rgb(0, 0, 0);
+    box-shadow: inset 0px 5px 100px -90px rgb(0, 0, 0);
     transition: transform var(--transition-duration);
 }
 
@@ -161,7 +194,7 @@ section p {
     min-height: 80px;
     max-height: 80px;
     object-fit: cover;
-    border-radius: var(--radius-xs);
+    border-radius: var(--radius-s);
     overflow: hidden;
 }
 
@@ -170,13 +203,21 @@ section p {
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: start;
     justify-content: space-between;
 }
 
 .project-preview h3 {
     font-family: var(--text-font-prm);
-    font-size: var(--text-size-xs);
-    font-weight: var(--text-weight-xl);
+    font-size: var(--text-size-s);
+    font-weight: var(--text-weight-l);
+}
+
+.description{
+    font-size: var(--text-size-xxs);
+    font-family: var(--text-font-prm);
+    font-weight: var(--text-weight-s);
+    overflow-y: hidden;
 }
 
 .learn-more {
@@ -188,18 +229,12 @@ section p {
 
 .learn-more p {
     font-family: var(--text-font-sdr);
-    font-size: var(--text-size-xs);
+    font-size: var(--text-size-xxs);
 }
 
 .click-info {
     font-style: italic;
     font-size: var(--text-size-xxs);
-}
-
-.description, .description li {
-    font-size: var(--text-size-xxs);
-    font-family: var(--text-font-prm);
-    font-weight: var(--text-weight-s);
 }
 
 

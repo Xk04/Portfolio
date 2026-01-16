@@ -97,8 +97,43 @@ section {
 
 /* --- About Projects --- */
 #about {
-    left: 10%;
-    margin: 30% 7% 0% 7%;
+    margin: 30% 0% 0% 0%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    width: 70%;
+    padding: 2%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    border-radius: var(--radius-m);
+}
+
+.profil {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 5%;
+}
+
+.profil div {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
 }
 
 /* --- Personal Projects --- */
@@ -116,8 +151,7 @@ section {
 
 /* --- College Projects --- */
 #college-projects {
-    left: 10%;
-    margin: 5% 7% 15% 7%;
+    margin: 1% 7% 15% 7%;
 }
 
 #college-projects h2 {
