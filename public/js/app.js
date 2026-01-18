@@ -3,6 +3,8 @@ class App {
         this.previews = document.querySelectorAll('.project-preview');
         this.projects = document.querySelectorAll('.project');
         this.closeBtns = document.querySelectorAll('.close-project');
+        this.age = document.getElementById("age");
+        this.date = new Date();
     }
 
     init() {
@@ -10,7 +12,19 @@ class App {
             window.scrollTo(0, 0);
             history.replaceState(null, null, " ");
         }
+        this.setAge();
         this.setUpEvents();
+    }
+
+    setAge() {
+        let day = this.date.getDate();
+        let month = this.date.getMonth()+1;
+        let year = this.date.getFullYear();
+        let yo = year - 2005;
+        if (!((month >= 2) && (day >= 23))) {
+            yo -=1;
+        }
+        this.age.textContent = yo;
     }
 
     smoothScroll() {
@@ -52,7 +66,9 @@ class App {
             });
         });
         this.smoothScroll();
-        }
+    }
+
+
 }
 
 

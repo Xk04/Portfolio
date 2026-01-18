@@ -49,34 +49,13 @@ header a:hover {
 
 
 /* === Presentation === */
-section h2 {
-    font-family: var(--title-section-font);
-    font-weight: var(--text-weight-xl);
-    font-size: var(--title-size-s);
-}
-
-section p {
-    font-family: var(--text-font-sdr);
-    font-size: var(--text-size-s);
-}
-
 #presentation h2{
     position: relative;
     font-size: var(--title-size-3xl);
     font-weight: var(--title-weight-l);
+    font-family: var(--title-font-sdr);
     letter-spacing: -0.02em;
-}
-
-#presentation h2::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -12px;
-    transform: translateX(-50%);
-    width: var(--middle-line-width);
-    height: 1px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: var(--radius-xl);
+    line-height: 0;
 }
 
 #presentation p {
@@ -86,15 +65,7 @@ section p {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.arrow {
-    margin-top: 15%;
-    margin-bottom: 0%;
-    display: flex;
-    justify-content: center;
-    animation: bounce 3s infinite;
-}
+}   
 
 .go-next {
     display: flex;

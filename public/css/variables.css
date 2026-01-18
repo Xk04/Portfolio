@@ -11,6 +11,7 @@
 
     /* Titles */
     --title-font: "Arimo";
+    --title-font-sdr: "Lexend";
 
     --title-size-xxs-sdr: 0.55em;
     --title-size-xs: 1.5em;
@@ -19,10 +20,11 @@
     --title-size-l: 2.3em;
     --title-size-xl: 2.5em;
     --title-size-xxl: 3em;
-    --title-size-3xl: 4em;
+    --title-size-3xl: 5em;
 
-    --title-weight-s: 100;
-    --title-weight-m: 200;
+    --title-weight-xs: 100;
+    --title-weight-s: 200;
+    --title-weight-m: 300;
     --title-weight-l: 400;
     --title-weight-xl: 600;
     
@@ -102,6 +104,11 @@
     src: url("../fonts/GravitasOne-Regular.ttf");
 }
 
+@font-face {
+    font-family: "Lexend";
+    src: url("../fonts/Lexend-VariableFont_wght.ttf");
+}
+
 
 /* === Animations === */
 @keyframes bounce {
@@ -138,4 +145,10 @@
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+::selection {
+    background-color: rgba(0, 60, 48, 0.4);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    color: rgb(233, 255, 247);
 }
