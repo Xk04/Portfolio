@@ -104,7 +104,7 @@ header a:hover {
     width: 15%;
     height: 15%;
     object-fit: cover;
-    border-radius: var(--radius-m);
+    border-radius: 90%;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
     opacity: 0.85;
 }
@@ -118,6 +118,50 @@ header a:hover {
 
 .profil p {
     font-size: var(--text-size-xs);
+    font-family: var(--title-font);
+    font-weight: var(--title-weight-s);
+    line-height: 0;
+}
+
+.fablab a {
+    width: auto;
+    height: auto;
+    color: #ffffff;
+}
+
+.fablab img {
+    width: 13%;
+    height: 13%;
+    object-fit: cover;
+    border-radius: 90%;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
+    opacity: 0.85;
+}
+
+.fablab h4 {
+    font-size: var(--title-size-xs);
+    font-family: var(--title-font);
+    font-weight: var(--title-weight-s);
+    line-height: 0;
+}
+
+.fablab p {
+    font-size: var(--text-size-xs);
+    font-family: var(--title-font);
+    font-weight: var(--title-weight-s);
+    line-height: 0;
+}
+
+.skills img {
+    width: 12%;
+    object-fit: cover;
+    border-radius: 90%;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.35);
+    opacity: 0.85;
+}
+
+.skills h4 {
+    font-size: var(--title-size-xs);
     font-family: var(--title-font);
     font-weight: var(--title-weight-s);
     line-height: 0;
