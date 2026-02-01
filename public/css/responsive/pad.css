@@ -185,7 +185,10 @@
 
     /* --- Links --- */ 
     .links {
-        justify-content: space-around;
+        gap: 10%;
+    }
+
+    .links a {
         font-size: var(--text-size-xs);
     }
 

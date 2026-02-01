@@ -178,14 +178,19 @@
     }
 
     .arrow2 {
-        margin: 12% 0% 0% 0%;
-        
+        margin: 25% 0% 0% 0%;
     }
 
     /* --- Other --- */   
-    
-    /* --- Links --- */ 
 
+    /* --- Links --- */ 
+    .links {
+        gap: 10%;
+    }
+
+    .links a {
+        font-size: var(--text-size-xs);
+    }
 
 
     /* === Project Preview === */

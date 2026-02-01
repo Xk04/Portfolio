@@ -198,6 +198,11 @@ h1 span {
     text-decoration: underline;
 }
 
+.links img {
+    width: 5%;
+    height: 5%;
+}
+
 
 /* === Project Preview === */
 .project-preview {
