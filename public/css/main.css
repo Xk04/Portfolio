@@ -1,0 +1,176 @@
+/*
+ * Contains the static caracteristics of elements
+ * They don't depend on the viewport 
+ */
+
+
+
+/* === HTML === */
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: var(--scroll-behavior);
+}
+
+
+
+/* === BODY === */
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+    transform: scale(1.1);
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+
+/* === HEADER === */
+header {
+    top: 0;
+    position: sticky;
+    display: flex;
+    z-index: 100;
+}
+
+header div {
+    display: flex;
+}
+
+
+
+/* === Title === */
+h1 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.h1-secondary {
+    text-align: center;
+}
+
+
+
+/* === MAIN === */
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#home {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+    scroll-margin-top: 0px;
+}
+
+
+
+/* === Arrow === */
+.arrow1, .arrow2 {
+    display: flex;
+    justify-content: var(--flex-center);
+}
+
+.go-next {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* === Presentation === */
+#presentation {
+    text-align: center;
+}
+
+
+
+/* === About === */
+#about {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.profil div, .fablab div, .skills div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+.profil, .fablab, .skills {
+    display: flex;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* === Project Preview === */
+.projects-grid-selection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.project-preview {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-preview-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.learn-more {
+    display: flex;
+}
+
+
+
+/* === Project === */
+.project {
+    display: none;
+    position: fixed;
+}
+
+/* --- header -- */
+
+/* -- main -- */
+.projects-grid-selection {
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+}
+
+.left-content {
+    overflow-y: scroll;
+}
+
+.right-content {
+    overflow-y: scroll;
+}

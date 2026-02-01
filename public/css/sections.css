@@ -2,35 +2,23 @@
 html {
     margin: 0;
     padding: 0;
-    color: var(--text-color-prm);
     scroll-behavior: var(--scroll-behavior);
 }
 
 
+
 /* === BODY === */
 body {
-    margin: 0% 5% 0% 5%;
+    margin: 0 var(--spacing-xs) 0;
     min-height: 100vh;
-    background-color: var(--home-bckg);
     position: relative;
-    overflow-x: hidden;
 }
 
 body::before {
-    content: "";
     position: fixed;
     inset: 0;
     z-index: -1;
 
-    background:
-        radial-gradient(ellipse 140% 50% at 15% 60%, rgba(124, 58, 237, 0.11), transparent 48%),
-        radial-gradient(ellipse 90% 80% at 85% 25%, rgba(245, 101, 101, 0.09), transparent 58%),
-        radial-gradient(ellipse 120% 65% at 40% 90%, rgba(34, 197, 94, 0.13), transparent 52%),
-        radial-gradient(ellipse 100% 45% at 70% 5%, rgba(251, 191, 36, 0.07), transparent 42%),
-        radial-gradient(ellipse 80% 75% at 90% 80%, rgba(168, 85, 247, 0.10), transparent 55%),
-        #000000;
-
-    filter: blur(var(--blur-big));
     transform: scale(1.1);
 }
 
@@ -39,33 +27,27 @@ body.no-scroll {
 }
 
 
+
 /* === HEADER === */
 header {
-    top: 0%;
-    padding: 0.5% 5% 0% 1%;
+    top: 0;
+    padding: 0.5% 5% 0 1%;
     position: sticky;
     width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: var(--flex-between);
     align-items: center;
-
-    box-sizing: border-box;
-
-    backdrop-filter: blur(var(--blur-little));
-    border-radius: var(--radius-m);
+    
     z-index: 100;
-    animation: fadeInDown 0.5s ease forwards;
 }
-
 
 header div {
     display: flex;
-    flex-direction: row;
-    justify-content: end;
+    justify-content: var(--flex-end);
     align-items: center;
     gap: 50%;
 }
+
 
 
 /* === MAIN === */
@@ -99,29 +81,30 @@ section p {
     scroll-margin-top: 0px;
 }
 
+
 /* --- Presentation --- */
 #presentation {
-    margin-top: 20%;
+    margin-top: var(--spacing-lg);
     text-align: center;
 }
 
 .arrow1 {
-    margin-top: 20%;
-    margin-bottom: 0%;
+    margin: var(--spacing-lg) 0 0;
     display: flex;
-    justify-content: center;
+    justify-content: var(--flex-center);
     animation: bounce 3s infinite;
 }
 
-/* --- About Projects --- */
+
+/* --- About --- */
 #about {
-    margin: 30% 0% 0% 0%;
+    margin: var(--spacing-xl) 0 0;
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: var(--flex-center);
+    align-items: var(--flex-center);
 }
 
 .about-content {
@@ -130,72 +113,71 @@ section p {
     height: auto;
     display: flex;
     flex-direction: column;
+    gap: var(--spacing-lg);
+    
     border-radius: var(--radius-m);
-    gap: 1%;
+    box-sizing: border-box;
 }
 
 .profil {
-    margin: 0;
-    padding: 0;
     width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: start;
-    gap: 5%;
+    justify-content: var(--flex-start);
+    gap: var(--spacing-xs);
+    box-sizing: border-box;
+    align-items: flex-start;
 }
 
 .profil div {
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: start;
+    align-items: var(--flex-start);
+    justify-content: var(--flex-start);
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .fablab {
-    margin: 0;
-    padding: 0;
     width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: end;
-    gap: 5%;
+    justify-content: var(--flex-end);
+    gap: var(--spacing-xs);
+    box-sizing: border-box;
+    align-items: flex-start;
 }
 
 .fablab div {
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: end;
-    justify-content: start;
+    align-items: var(--flex-end);
+    justify-content: var(--flex-start);
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .skills {
-    margin: 0;
-    padding: 0;
     width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: start;
-    gap: 5%;
+    justify-content: var(--flex-start);
+    gap: var(--spacing-xs);
+    box-sizing: border-box;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .arrow2 {
-    margin-top: 5%;
-    margin-bottom: 0%;
+    margin: var(--spacing-xs) 0 0;
     display: flex;
-    justify-content: center;
+    justify-content: var(--flex-center);
     animation: bounce 3s infinite;
 }
 
+
 /* --- Personal Projects --- */
 #personal-projects {
-    left: 10%;
-    margin: 10% 7%;
-    margin-top: 30%;
-    
+    margin: var(--spacing-lg) var(--spacing-sm);
 }
 
 #personal-projects h2 {
@@ -205,7 +187,7 @@ section p {
 
 /* --- College Projects --- */
 #college-projects {
-    margin: 1% 7% 15% 7%;
+    margin: 5% var(--spacing-sm) 15%;
 }
 
 #college-projects h2 {

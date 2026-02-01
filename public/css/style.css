@@ -1,0 +1,287 @@
+/*
+ * Contains the style of all elements
+ * The sizes, positions, ... components are coded in the responsive folder
+ */
+
+
+
+/* === HTML === */
+html {
+    color: var(--text-color-prm);
+}
+
+
+
+/* === BODY === */
+body {
+    background-color: var(--home-bckg);
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+
+    background:
+        radial-gradient(ellipse 140% 50% at 15% 60%, rgba(124, 58, 237, 0.11), transparent 48%),
+        radial-gradient(ellipse 90% 80% at 85% 25%, rgba(245, 101, 101, 0.09), transparent 58%),
+        radial-gradient(ellipse 120% 65% at 40% 90%, rgba(34, 197, 94, 0.13), transparent 52%),
+        radial-gradient(ellipse 100% 45% at 70% 5%, rgba(251, 191, 36, 0.07), transparent 42%),
+        radial-gradient(ellipse 80% 75% at 90% 80%, rgba(168, 85, 247, 0.10), transparent 55%),
+        #000000;
+
+    filter: blur(var(--blur-big));
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+
+/* === MAIN === */
+section h2 {
+    font-family: var(--title-section-font);
+    font-weight: var(--text-weight-xl);
+}
+
+section p {
+    font-family: var(--text-font-sdr);
+}
+
+
+
+/* === HEADER === */
+header {
+    box-sizing: border-box;
+    backdrop-filter: blur(var(--blur-little));
+    border-radius: var(--radius-m);
+
+    animation: fadeInDown 0.5s ease forwards;
+}
+
+header a {
+    font-family: var(--header-font);
+    color: var(--text-color-prm);
+    text-decoration: none;
+
+    box-shadow: inset 0 -0.1em 0 transparent;
+    transition: box-shadow var(--transition-duration) ease;
+}
+
+header a:visited {
+    color: var(--text-color-prm);
+    text-decoration: none;
+}
+
+header a:hover {
+    box-shadow: inset 0 -0.1em 0 currentColor;
+}
+
+
+
+/* === Title === */
+h1 span {
+    font-family: var(--title-font);
+    font-weight: var(--title-weight-s);
+}
+
+.h1-primary {
+    font-weight: var(--title-weight-m);
+}
+
+.h1-secondary {
+    text-transform: uppercase;
+    font-weight: var(--title-weight-l);
+}
+
+
+
+/* === Presentation === */
+#presentation h2{
+    font-weight: var(--title-weight-l);
+    font-family: var(--title-font-sdr);
+}
+
+#presentation p {
+    text-wrap: pretty;
+} 
+
+
+
+/* === Arrows === */
+.arrow1, .arrow2 {
+    animation: bounce 3s infinite;
+}
+
+.go-next {
+    text-decoration: none;
+    color: var(--text-color-prm);
+    font-family: var(--title-font);
+    transition: transform 0.2s ease;
+}
+
+.go-next:active {
+    transform: scale(0.95);
+}
+
+.next-arrow {
+    font-weight: var(--text-weight-xl);
+}
+
+
+
+/* === About === */
+.about-content {
+    background-color: rgba(255, 255, 255, 0.02);
+    backdrop-filter: var(--blur-big);
+
+    border-radius: var(--radius-m);
+    box-sizing: border-box;
+}
+
+.profil, .fablab, .skills {
+    box-sizing: border-box;
+}
+
+.profil h4, .fablab h4, .skills h4 {
+    font-family: var(--title-font);
+    font-weight: var(--title-weight-s);
+}
+
+.profil p, .fablab p, .skills p {
+    font-family: var(--title-font);
+    font-weight: var(--title-weight-s);
+}
+
+/* --- Profil --- */
+.profil img {
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 90%;
+    box-shadow: var(--shadow-md);
+    opacity: 0.85;
+}
+
+/* --- FabLab --- */
+.fablab img {
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 90%;
+    box-shadow: var(--shadow-md);
+    opacity: 0.85;
+}
+
+.fablab a {
+    color: #ffffff;
+    font-style: italic;
+    text-decoration: none;
+}
+
+/* --- Skills --- */
+.skills img {
+    flex-shrink: 0;
+    object-fit: cover;
+    opacity: 0.85;
+}
+
+/* --- Other --- */   
+
+
+/* --- Links --- */ 
+.links p, .links a{
+    font-family: var(--title-font);
+    color: var(--text-color-prm);
+    font-style: normal;
+}
+
+.links a {
+    text-decoration: underline;
+}
+
+
+/* === Project Preview === */
+.project-preview {
+    color: var(--text-color-prm);
+
+    background: var(--project-background-color);
+    backdrop-filter: blur(var(--blur-medium)) saturate(80%);
+    -webkit-backdrop-filter: blur(var(--blur-medium)) saturate(80%);
+    box-shadow: var(--shadow-md), var(--shadow-inset);
+
+    border-radius: var(--radius-m);
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    
+    transition: transform var(--transition-duration);
+}
+
+.project-preview:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.project-preview img {
+    object-fit: cover;
+    border-radius: var(--radius-s);
+    overflow: hidden;
+}
+
+.project-preview h3 {
+    font-family: var(--text-font-prm);
+    font-weight: var(--text-weight-l);
+}
+
+.description{
+    font-family: var(--text-font-prm);
+    font-weight: var(--text-weight-s);
+    overflow-y: hidden;
+}
+
+.learn-more p {
+    font-family: var(--text-font-sdr);
+}
+
+.click-info {
+    font-style: italic;
+}
+
+
+
+/* === Project === */
+.project {
+    background: var(--project-background-color);
+    backdrop-filter: blur(var(--blur-big));
+    -webkit-backdrop-filter: blur(var(--blur-big));
+
+    border-radius: var(--radius-s);
+    box-shadow: var(--shadow-lg);
+    
+    z-index: 100;
+}
+
+/* --- header -- */
+.project-header h3 {
+    font-family: var(--text-font-prm);
+    font-weight: var(--text-weight-l);
+}
+
+.close-project {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close-project img {
+    color: var(--text-color-prm);
+}
+
+/* -- main -- */
+.iframe-video {
+    border-radius: var(--radius-s);
+}
+
+
+
+/* === FOOTER === */
+footer p {
+    font-family: var(--text-font-prm);
+}

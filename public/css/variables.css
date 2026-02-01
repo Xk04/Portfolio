@@ -20,7 +20,10 @@
     --title-size-l: 2.3em;
     --title-size-xl: 2.5em;
     --title-size-xxl: 3em;
-    --title-size-3xl: 5em;
+    --title-size-xxl: 3em;
+    --title-size-3xl: 4em;
+    --title-size-4xl: 5em;
+
 
     --title-weight-xs: 100;
     --title-weight-s: 200;
@@ -81,6 +84,26 @@
     /* Scroll params */
     --scroll-behavior: smooth;
     --scroll-margin-top: 200px;
+
+    /* Flexbox Utilities */
+    --flex-center: center;
+    --flex-start: start;
+    --flex-end: end;
+    --flex-between: space-between;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.5);
+    --shadow-inset: inset 0px 5px 100px -90px rgba(0, 0, 0, 1);
+
+    /* Spacing */
+    --spacing-xs: 5%;
+    --spacing-sm: 7%;
+    --spacing-md: 10%;
+    --spacing-lg: 20%;
+    --spacing-xl: 30%;
+    --spacing-xxl: 50%;
 }
 
 /* === Fonts === */
