@@ -211,7 +211,14 @@
 
     .links a {
         font-size: var(--text-size-xs);
+        gap: 4%;
     }
+
+    .links img {
+        width: 10%;
+        height: 10%;
+    }
+
 
 
 
