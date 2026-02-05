@@ -6,7 +6,7 @@
     --header-bckg: rgba(0, 0, 0, 0.9);
     --header-shadow: 0px 0px 40px 40px;
     
-    --text-color-prm: #ffffff;
+    --text-color-prm: #E0E0E0;
     --text-color-sdr: #000000;
 
     /* Titles */
@@ -40,10 +40,10 @@
     --middle-line-width: 400px;
     --middle-line-width-m: 350px;
     --middle-line-width-s: 150px;
-    --middle-line-width-xs: 50px;
+    --middle-line-width-xs: 50px;   
 
     /* Texts */
-    --text-font-prm: "Telex";
+    --text-font-prm: "Park";
     --text-font-sdr: "Time New Roman", sans-serif;
 
     --text-size-xxs: 0.8em;
@@ -74,11 +74,11 @@
     --radius-xs: 5px;
     --radius-s: 10px;
     --radius-m: 15px;
-    --radius-m: 20px;
+    --radius-l: 20px;
     --radius-xl: 25px;
 
     --blur-little: 3px;
-    --blur-medium: 3px;
+    --blur-medium: 13px;
     --blur-big: 30px;
 
     /* Scroll params */
@@ -93,7 +93,7 @@
 
     /* Shadows */
     --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.35);
-    --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 0px 2px rgba(255, 255, 255, 0.25);
     --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.5);
     --shadow-inset: inset 0px 5px 100px -90px rgba(0, 0, 0, 1);
 
@@ -113,8 +113,8 @@
 }
 
 @font-face {
-    font-family: "Telex";
-    src: url("../fonts/Telex-Regular.ttf");
+    font-family: "Park";
+    src: url("../fonts/Parkinsans-VariableFont_wght.ttf");
 }
 
 @font-face {
@@ -134,6 +134,12 @@
 
 
 /* === Animations === */
+@keyframes gradientFlow {
+  0%   { background-position: 50% 30%; }
+  50%  { background-position: 50% 60%; }
+  100% { background-position: 50% 30%; }
+}
+
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -171,7 +177,7 @@
 }
 
 ::selection {
-    background-color: rgba(0, 60, 48, 0.4);
+    background-color: rgba(70, 58, 237, 0.15);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     color: rgb(233, 255, 247);
 }
