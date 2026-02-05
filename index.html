@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
-
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +19,11 @@
     <!--===========-->
 
     <!--=== JS ===-->
+    <script defer src="public/js/project.js"></script>
+    <script defer src="public/js/preview.js"></script>
+    <script defer src="public/js/project_list.js"></script>
+    <script defer src="public/js/builder.js"></script>
+    <!--application-->
     <script defer src="public/js/app.js"></script>
     <script defer src="public/js/main.js"></script>
     <!--===========-->
@@ -28,6 +33,7 @@
 <body>
     <div id="home"></div>
 
+    <!--=== Header ===-->
     <header>
         <h1>
             <span class="h1-primary">Maxime</span>
@@ -42,6 +48,7 @@
     </header>
 
     <main>
+        <!--=== Presentation ===-->
         <section class="reveal">
             <div id="presentation">
                 <h2>Welcome</h2>
@@ -52,7 +59,7 @@
             </div>
         </section>
 
-
+         <!--=== About me ===-->
         <section id= "about" class="reveal">
             <h2>About me</h2>
             <div class="about-content">
@@ -91,170 +98,24 @@
             </div>
         </section>
 
-
+        <!--=== Projects ===-->
         <section id= "personal-projects" class="reveal">
             <h2>Personal Projects</h2>
-            <div class="projects-grid-selection">
-                <!-- Tank -->
-                <div class="project-preview reveal">
-                    <img src="public/images/preview/tank.png" alt="">
-                    <div class="project-preview-content">
-                        <h3>Autonomous Robot — Yahboom Tank</h3>
-                        <p class="description"></p>
-                        <div class="learn-more">
-                            <p>01/2026</p>
-                            <p class="click-info">Fabrication Lab</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project">
-                    <div class="project-header">
-                        <h3>Autonomous Robot — Yahboom Tank</h3>
-                        <button class="close-project"><img src="public/images/icons/close.png"></button>
-                    </div>
-                    <div class="project-grid">
-                        <div class="left-content">
-                            <p>Description...</p>
-                        </div>
-                        <div class="right-content">
-                            <iframe src="" frameborder="0"></iframe>
-                        </div>
-                    </div>
-                </div>
-                <!-- Tiny Bot -->
-                <div class="project-preview reveal">
-                    <img src="public/videos/preview/tiny_bot.gif" alt="">
-                    <div class="project-preview-content">
-                        <h3>Autonomous Robot — Yahboom Tiny Bot</h3>
-                        <p class="description"></p>
-                        <div class="learn-more">
-                            <p>06/2025</p>
-                            <p class="click-info">Fabrication Lab</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project">
-                    <div class="project-header">
-                        <h3>Autonomous Robot — Yahboom Tiny Bot</h3>
-                          <button class="close-project"><img src="public/images/icons/close.png"></button>
-                    </div>
-                    <div class="project-grid">
-                        <div class="left-content">
-                            <p>Description...</p>
-                        </div>
-                        <div class="right-content">
-                            <iframe src="" frameborder="0"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="projects-grid-selection"></div>  
         </section>
 
 
         <section id= "college-projects" class="reveal">
             <h2>College Projects</h2>
-
-            <div class="projects-grid-selection">
-                <!-- Game Engine -->
-                <div class="project-preview reveal">
-                    <img src="public/images/preview/game_engine2.png" alt="">
-                    <div class="project-preview-content">
-                        <h3>Game Engine in Java</h3>
-                        <p class="description">
-                            This game engine is a simple structure to create platformer games.<br>
-                            The idea of this project was to learn how to organize a system in order to scale in the future.
-                        </p>
-                        <div class="learn-more">
-                            <p>01/2026</p>
-                            <p class="click-info">click to learn more</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project">
-                    <div class="project-header">
-                        <h3>Game Engine in Java</h3>
-                        <button class="close-project"><img src="public/images/icons/close.png"></button>
-                    </div>
-                    <div class="project-grid">
-                        <div class="left-content">
-
-                            <p>Description...</p>
-                        </div>
-                        <div class="right-content">
-
-                        </div>
-                    </div>
-                </div>
-                <!-- Lose1Max -->
-                <div class="project-preview reveal">
-                    <img loading="lazy" src="public/videos/preview/lose1max.gif" alt="">
-                    <div class="project-preview-content">
-                        <h3>Sport Betting website — Lose1Max</h3>
-                        <p class="description"></p>
-                        <div class="learn-more">
-                            <p>06/2025</p>
-                            <p class="click-info">click to learn more</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project">
-                    <div class="project-header">
-                        <h3>Sport Betting website — Lose1Max</h3>
-                        <button class="close-project"><img src="public/images/icons/close.png"></button>
-                    </div>
-                    <div class="project-grid">
-                        <div class="left-content">
-                            <iframe 
-                            class="iframe-video"
-                            src="https://www.youtube.com/embed/VskOuPR4LbY" 
-                            title="L2 informatique - Projet Web : Lose1Max" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen>
-                            </iframe>
-                            <p>Description...</p>
-                        </div>
-                        <div class="right-content">
-
-                        </div>
-                    </div>
-                </div>
-                <!-- Polynomiale Manipulation -->
-                <div class="project-preview reveal">
-                    <img src="public/images/preview/R.png" alt="">
-                    <div class="project-preview-content">
-                        <h3>Polynomial Manipulation in R programming</h3>
-                        <p class="description">
-                            One month project in R programming.<br>
-                            Objective : set up basics algorithms for polynomials.<br>
-                            Optional : test automation for the main functions 
-                        </p>
-                        <div class="learn-more">
-                            <p>12/2024</p>
-                            <p class="click-info">click to learn more</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="project">
-                    <div class="project-header">
-                        <h3>Polynomial Manipulation in R programming</h3>
-                        <button class="close-project"><img src="public/images/icons/close.png"></button>
-                    </div>
-                    <div class="project-grid">
-                        <div class="left-content">
-                            <p>Description...</p>
-                        </div>
-                        <div class="right-content">
-                            <iframe src="" frameborder="0"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="projects-grid-selection"></div>
         </section>
-
     </main>
 
+    <!--=== Footer ===-->
+    <footer>
+
+    </footer>
 </body>
+
 
 </html>
