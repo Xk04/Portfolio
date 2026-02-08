@@ -1,6 +1,6 @@
 // ==== Personal Projects ====
 
-let personalProjects = [
+let personalProjects = [    
     // Tank
     new Preview(
         "public/images/preview/tank.png", 
@@ -41,8 +41,7 @@ let collegeProjects = [
         "public/images/preview/game_engine2.png", 
         "Game Engine in Java", 
         `
-            This game engine is a simple structure to create platformer games.<br>
-            The idea of this project was to learn how to organize a system in order to scale in the future.
+            MVC/EC structure to create platformer games.
         `, 
         "01/2026", 
         "OOP course"
@@ -82,9 +81,7 @@ let collegeProjects = [
         "public/images/preview/R.png", 
         "Polynomial Manipulation in R programming", 
         `
-            One month project in R programming.<br>
-            Objective : set up basics algorithms for polynomials.<br>
-            Optional : test automation for the main functions 
+            Polynomial algorithms & test automation 
         `, 
         "12/2024", 
         "R programming course"

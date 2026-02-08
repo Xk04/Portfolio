@@ -7,335 +7,59 @@
 @media (max-width: 1024px) {
 
     :root {
+        /* Positions */
+        --presentation-margin: var(--spacing-xxl) 0% 0% 0%;
+        --arrow-1-margin: var(--spacing-l) 0% 0% 0%;
+        --about-margin: var(--spacing-3xl) 0% 0% 0%;
+        --arrow-2-margin: var(--spacing-s) 0% 0% 0%;
+        --personal-projects-margin: var(--spacing-xxl) 0% 0% 0%;
+        --college-projects-margin: var(--spacing-xs) 0% 10% 0%;
+        --footer-margin: var(--spacing-xxl) 0% 0% 0%;
+
+        /* Body */
+        --body-margin: 0 var(--spacing-s);
+
+        /* Header */
+        --header-padding: var(--spacing-3xs);
+        --header-gap: 50px;
+
+        /* Presentation */
+        --presentation-h2: 5em;
+        --presentation-p: var(--text-size-s);
+
+        /* About */
+        --about-content-padding: 5%;
+        --about-content-gap: 50px;
+        --about-content-width: 90%;
+        --about-p-size: var(--text-size-xs);
+
+        /* Img sizes */
+        --profile-img-size: 185px;
+        --fablab-img-size: 175px;
+        --college-img-size: 165px;
+        --link-sizes: 25px;
+
+        /* Footer */
+        --links-gap: 30%;
+
+        /* Title */
+        --prm-size: 1em;
+        --sdr-size: 0.55em;
+
+        /* Text */
+        --header-a-size: var(--text-size-s);
+        --h2-size: var(--title-size-m);
+        --h3-size: var(--title-size-xs);
+        --p-size: var(--text-size-s);
+        --a-size: var(--text-size-s);
+        --preview-p-size: var(--text-size-xs);
+
+        --arrow-size-text: var(--text-size-xs);
+        --arrow-size-symbol: var(--text-size-s);
+        --arrow-weight-symbol: var(--text-weight-s);
+
+        /* Other */
+        --column-number: repeat(2, 1fr);
         --scroll-margin-top: 150px;
-    }
-
-    /* === BODY === */
-    body {
-        margin: 0% 5%;
-    }
-
-
-
-    /* === HEADER === */
-    header {
-        padding: 1%;
-
-        width: 100%;
-
-        justify-content: var(--flex-between);
-        align-items: center;
-    }
-
-    header div {
-        justify-content: var(--flex-end);
-        align-items: center;
-        gap: 30%;
-    }
-
-    header a {
-        font-size: var(--text-size-s);
-    }
-
-
-
-    /* === Title === */
-    h1 span {
-        line-height: 85%;
-    }
-
-    .h1-primary {
-        font-size: var(--text-size-xs);
-    }
-
-    .h1-secondary {
-        width: 100%;
-
-        font-size: var(--title-size-xxs-sdr);
-        letter-spacing: 0.02em;
-    }
-
-
-
-    /* === MAIN === */
-    section {
-        scroll-margin-top: var(--scroll-margin-top);
-    }
-
-    section h2 {
-        font-size: var(--title-size-s);
-    }
-
-    section p {
-        font-size: var(--text-size-s);
-    }
-
-
-
-    /* === Arrow === */
-    .next-section {
-        font-size: var(--text-size-s);
-    }
-
-    .next-arrow {
-        font-size: var(--text-size-l);
-        font-weight: var(--text-weight-xl);
-        line-height: 90%;
-    }
-
-
-
-    /* === Presentation === */
-    #presentation {
-        margin-top: 25%;
-    }
-
-    #presentation h2 {
-        position: relative;
-
-        font-size: var(--title-size-3xl);
-        letter-spacing: -0.02em;
-        line-height: 0;
-    }
-
-    #presentation p {
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-
-        font-size: var(--text-size-m);
-        line-height: 0;
-    } 
-
-    .arrow1 {
-        margin: var(--spacing-lg) 0% 0% 0%;
-    }
-
-
-
-    /* === About === */
-    #about {
-        margin: var(--spacing-xxl) 0 0;
-
-        width: 100%;
-        height: auto;
-
-        justify-content: var(--flex-center);
-        align-items: var(--flex-center);
-    }
-
-    .about-content {
-        padding: 4%;
-
-        width: 80%;
-        height: auto;
-        
-        gap: 100px;
-    }
-
-    .profil, .fablab, .skills {
-        width: 100%;
-        align-items: center;
-        gap: var(--spacing-xs);
-    }
-
-    .profil h4, .fablab h4, .skills h4 {
-        font-size: var(--title-size-s);
-        line-height: 0;
-    }
-
-    .profil p, .fablab p, .skills p {
-        font-size: var(--text-size-xs);
-        line-height: 1;
-    }
-
-    /* --- Profil --- */
-    .profil {
-        justify-content: var(--flex-start);
-    }
-
-    .profil div {
-        min-width: 0;
-
-        align-items: var(--flex-start);
-        justify-content: var(--flex-start);
-    }
-
-    .profil img {
-        width: 140px;
-        height: 140px;
-    }
-
-    /* --- FabLab --- */
-    .fablab {
-        justify-content: end;
-        text-align: justify;
-    }
-
-    .fablab div {
-        align-items: end;
-        justify-content: end;
-        min-width: 0;
-    }
-
-    .fablab img {
-        width: 135px;
-        height: 135px;
-    }
-
-    .fablab a {
-        width: auto;
-        height: auto;
-    }
-
-    /* --- Skills --- */
-    .skills {
-        justify-content: var(--flex-start);
-    }
-
-    .skills img {
-        width: auto;
-        height: 120px;
-    }
-
-    .arrow2 {
-        margin: 12% 0% 0% 0%;
-        
-    }
-    /* --- Other --- */   
-
-    /* --- Links --- */ 
-    .links {
-        gap: 10%;
-    }
-
-    .links a {
-        font-size: var(--text-size-xs);
-        gap: 4%;
-    }
-
-    .links img {
-        width: 10%;
-        height: 10%;
-    }
-
-
-
-
-    /* === Project Preview === */
-    #personal-projects {
-        margin: 40% var(--spacing-sm) 0%;
-    }
-
-    #college-projects {
-        margin: 10% var(--spacing-sm) 15%;
-    }
-
-    #personal-projects h2, #college-projects h2 {
-        text-align: center;
-    }
-
-    .projects-grid-selection {
-        gap: 5%;
-    }
-
-    .project-preview {
-        margin: 0;
-        padding: 3%;
-
-        width: auto;
-        height: var(--box-height);
-
-        align-items: var(--flex-center);
-    }
-
-    .project-preview img {
-        width: 100%;
-        min-height: 80px;
-        max-height: 80px;
-    }
-
-    .project-preview-content {
-        width: 100%;
-        height: 100%;
-
-        align-items: start;
-        justify-content: space-between;
-    }
-
-    .project-preview h3 {
-        font-size: var(--text-size-s);
-    }
-
-    .description{
-        font-size: var(--text-size-xxs);
-    }
-
-    .learn-more {
-        width: 100%;
-        justify-content: var(--flex-between);
-    }
-
-    .learn-more p {
-        font-size: var(--text-size-xxs);
-    }
-
-    .click-info {
-        font-size: var(--text-size-xxs);
-    }
-
-
-
-    /* === Project === */
-    .project {
-        top: var(--panel-pos-top);
-        left: var(--panel-pos-left);
-
-        width: var(--panel-width);
-        height: var(--panel-height);
-
-        transform: translate(-50%, -50%) scale(1.01);
-    }
-
-    /* --- header -- */
-    .project-header {
-        position: relative;
-
-        margin: var(--spacing-xs) var(--spacing-xs);
-
-        justify-content: var(--flex-between);
-        align-items: center;
-    }
-
-    .project-header h3 {
-        font-size: var(--title-size-m);
-        line-height: 1;
-        text-wrap: wrap;
-    }
-
-    .close-project {
-        position: relative;
-        z-index: 101;
-    }
-
-    .close-project img {
-        width: 120%;
-    }
-
-    /* -- main -- */
-    .projects-grid-selection {
-        margin: 0% 3%;
-        height: 80%;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-    }
-
-    .right-content {
-        text-align: center;
-    }
-
-    .iframe-video {
-        width: 100%;
-        height: 45%;
     }
 }

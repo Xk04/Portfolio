@@ -1,7 +1,65 @@
 /*
- * Contains the static caracteristics of elements
- * They don't depend on the viewport 
+ * Define the default responsive.
  */
+
+
+
+/* === Main variables === */
+:root {
+    /* Positions */
+    --presentation-margin: var(--spacing-xxl) 0% 0% 0%;
+    --arrow-1-margin: var(--spacing-l) 0% 0% 0%;
+    --about-margin: var(--spacing-xxl) 0% 0% 0%;
+    --arrow-2-margin: var(--spacing-xs) 0% 0% 0%;
+    --personal-projects-margin: var(--spacing-xxl) 0% 0% 0%;
+    --college-projects-margin: var(--spacing-xs) 0% 10% 0%;
+    --footer-margin: var(--spacing-xxl) 0% 0% 0%;
+
+    /* Body */
+    --body-margin: 0 var(--spacing-m);
+
+    /* Header */
+    --header-padding: var(--spacing-3xs);
+    --header-gap: 100px;
+
+    /* Presentation */
+    --presentation-h2: 6em;
+    --presentation-p: var(--text-size-m);
+
+    /* About */
+    --about-content-padding: 5%;
+    --about-content-gap: 50px;
+    --about-content-width: 80%;
+    --about-p-size: var(--text-size-xs);
+
+    /* Img sizes */
+    --profile-img-size: 185px;
+    --fablab-img-size: 175px;
+    --college-img-size: 165px;
+    --link-sizes: 25px;
+
+    /* Footer */
+    --links-gap: 30%;
+
+    /* Title */
+    --prm-size: 1em;
+    --sdr-size: 0.55em;
+
+    /* Text */
+    --header-a-size: var(--text-size-s);
+    --h2-size: var(--title-size-l);
+    --h3-size: var(--title-size-xs);
+    --p-size: var(--text-size-s);
+    --a-size: var(--text-size-s);
+    --preview-p-size: var(--text-size-xs);
+
+    --arrow-size-text: var(--text-size-xs);
+    --arrow-size-symbol: var(--text-size-s);
+    --arrow-weight-symbol: var(--text-weight-s);
+
+    /* Other */
+    --column-number: repeat(3, 1fr);
+}
 
 
 
@@ -9,6 +67,10 @@
 html {
     margin: 0;
     padding: 0;
+
+    width: 100%;
+    height: auto;
+
     scroll-behavior: var(--scroll-behavior);
 }
 
@@ -16,12 +78,22 @@ html {
 
 /* === BODY === */
 body {
-    position: relative;
+    top: 0;
+
+    margin: var(--body-margin);
+    padding: 0;
+
+    width: auto;
     min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 body::before {
     position: fixed;
+
     inset: 0;
     z-index: -1;
 
@@ -36,14 +108,34 @@ body.no-scroll {
 
 /* === HEADER === */
 header {
-    top: 0;
     position: sticky;
+
+    top: 0;
+
+    margin: 0;
+    padding: var(--header-padding);
+
+    width: auto;
+    
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
     z-index: 100;
 }
 
 header div {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: var(--header-gap);
+}
+
+header a {
+    font-size: var(--header-a-size);
 }
 
 
@@ -55,8 +147,21 @@ h1 {
     align-items: stretch;
 }
 
+h1 span {
+    line-height: 85%;
+}
+
+.h1-primary {
+    font-size: var(--prm-size);
+}
+
 .h1-secondary {
+    width: 100%;
+
     text-align: center;
+
+    font-size: var(--sdr-size);
+    letter-spacing: 0.02em;
 }
 
 
@@ -65,6 +170,19 @@ h1 {
 main {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+section {
+    scroll-margin-top: var(--scroll-margin-top);
+}
+
+section h2 {
+    font-size: var(--h2-size);
+}
+
+section p {
+    font-size: var(--text-size-s);
 }
 
 #home {
@@ -78,9 +196,17 @@ main {
 
 
 /* === Arrow === */
+.arrow1 {
+    margin: var(--arrow-1-margin);
+}
+
+.arrow2 {
+    margin: var(--arrow-2-margin);
+}
+
 .arrow1, .arrow2 {
     display: flex;
-    justify-content: var(--flex-center);
+    justify-content: center;
 }
 
 .go-next {
@@ -90,72 +216,183 @@ main {
     align-items: center;
 }
 
+.next-section {
+    font-size: var(--arrow-size-text);
+}
+
+.next-arrow {
+    font-size: var(--arrow-size-symbol);
+    font-weight: var(--arrow-weight-symbol); 
+}
+
 
 
 /* === Presentation === */
 #presentation {
+    margin: var(--presentation-margin);
+
     text-align: center;
+}
+
+#presentation h2 {
+    position: relative;
+
+    font-size: var(--presentation-h2);
+}
+
+#presentation p {
+    font-size: var(--presentation-p);
 }
 
 
 
 /* === About === */
 #about {
+    margin: var(--about-margin);
+
+    width: 90%;
+    height: auto;
+
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-content {
+    padding: var(--about-content-padding);
+    
+    width: var(--about-content-width);
+    height: auto;
+
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-lg);
+    gap: var(--about-content-gap);
 }
 
-.profil div, .fablab div, .skills div {
+.profile, .fablab, .degree {
+    width: auto;
+    height: auto;
+    display: flex;
+    gap: 5%;
+}
+
+.profile div, .fablab div, .degree div {
     display: flex;
     flex-direction: column;
-    flex: 1;
-    overflow: hidden;
-}
-
-.profil, .fablab, .skills {
-    display: flex;
-}
-
-.links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
 }
 
-.links a {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 2%;
+.about-content h3 {
+    font-size: var(--h3-size);
 }
+
+.about-content p {
+    font-size: var(--about-p-size);
+}
+
+/* --- Profil --- */
+.profile div {
+    align-items: start;
+}
+
+.profile img {
+    width: var(--profile-img-size);
+    height: var(--profile-img-size);
+}
+
+/* --- FabLab --- */
+.fablab div {
+    align-items: end;
+    text-align: end;
+}
+
+.fablab img {
+    width: var(--fablab-img-size);
+    height: var(--fablab-img-size);
+}
+
+/* --- Degree --- */
+.degree div {
+    align-items: start;
+}
+
+.degree img {
+    width: auto;
+    height: var(--college-img-size);
+}
+
 
 
 /* === Project Preview === */
+#personal-projects {
+    margin: var(--personal-projects-margin);
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#college-projects {
+    margin: var(--college-projects-margin);
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .projects-grid-selection {
+    width: 85%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: var(--column-number);
+    gap: 5%;
 }
 
 .project-preview {
+    padding: 3%;
+    height: var(--box-height);
+
     display: flex;
     flex-direction: column;
+}
+
+.project-preview h3 {
+    font-size: var(--h3-size);
+}
+
+.description{
+    font-size: var(--preview-p-size);
+}
+
+.project-preview img {
+    width: 100%;
+    min-height: 80px;
+    max-height: 80px;
 }
 
 .project-preview-content {
+    height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    overflow-y: hidden;
 }
 
 .learn-more {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+}
+
+.learn-more p {
+    font-size: var(--preview-p-size);
+}
+
+.click-info {
+    font-size: var(--preview-p-size);
 }
 
 
@@ -166,19 +403,49 @@ main {
     position: fixed;
 }
 
-/* --- header -- */
-
-/* -- main -- */
-.projects-grid-selection {
-    display: grid;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px; 
-}
-
 .left-content {
     overflow-y: scroll;
 }
 
 .right-content {
     overflow-y: scroll;
+}
+
+
+
+/* === FOOTER === */
+footer {
+    padding: 3% 5%;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--links-gap);
+}
+
+.links img {
+    width: var(--link-sizes);
+    height: auto;
+}
+
+.links a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.links a:hover {
+    transform: scale(0.92);
 }

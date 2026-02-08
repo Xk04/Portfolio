@@ -1,62 +1,77 @@
 /* === Variables === */
 :root {
-    /* colors */
-    --home-bckg: #000000;
+    /* Spacing */
+    --spacing-3xs: 1%;
+    --spacing-xxs: 3%;
+    --spacing-xs: 5%;
+    --spacing-s: 7%;
+    --spacing-m: 10%;
+    --spacing-l: 20%;
+    --spacing-xl: 30%;
+    --spacing-xxl: 40%;
+    --spacing-3xl: 50%;
+    --spacing-4xl: 60%;
 
-    --header-bckg: rgba(0, 0, 0, 0.9);
-    --header-shadow: 0px 0px 40px 40px;
-    
-    --text-color-prm: #E0E0E0;
-    --text-color-sdr: #000000;
+    /* Colors */
+    --background-color: #000000;
+    --text-color: #d2d2d2;
 
-    /* Titles */
-    --title-font: "Arimo";
-    --title-font-sdr: "Lexend";
 
-    --title-size-xxs-sdr: 0.55em;
+    /* Fonts */
+    --font-1: "Arimo";
+    --font-2: "Lexend";
+    --font-3: "Inter", sans-serif;
+    --font-4: "Park";
+    --font-5: "Time New Roman", sans-serif;
+ 
+
+    /* Font sizes */
+    --title-size-xxs: 0.8em;
     --title-size-xs: 1.5em;
     --title-size-s: 1.8em;
-    --title-size-m: 2em;
-    --title-size-l: 2.3em;
-    --title-size-xl: 2.5em;
+    --title-size-m: 2.1em;
+    --title-size-l: 2.4em;
+    --title-size-xl: 2.7em;
     --title-size-xxl: 3em;
-    --title-size-xxl: 3em;
-    --title-size-3xl: 4em;
-    --title-size-4xl: 5em;
+    --title-size-3xl: 4.3em;
+    --title-size-4xl: 4.6em;
 
+    --text-size-xxs: 0.5em;
+    --text-size-xs: 1em;
+    --text-size-s: 1.5em;
+    --text-size-m: 2em;
+    --text-size-l: 2.5em;
+    --text-size-xl: 3em;
+    --text-size-xxl: 3.5em;
+    --text-size-3xl: 4em;
+    --text-size-4xl: 4.5em;
 
+    
+    /* Font weights */
     --title-weight-xs: 100;
     --title-weight-s: 200;
     --title-weight-m: 300;
     --title-weight-l: 400;
     --title-weight-xl: 600;
-    
-    /* Header */
-    --header-font: "Arimo";
-    --a-gap: 30%;
-
-    /* Sections */
-    --title-section-font: "Inter", sans-serif;
-    --middle-line-width: 400px;
-    --middle-line-width-m: 350px;
-    --middle-line-width-s: 150px;
-    --middle-line-width-xs: 50px;   
-
-    /* Texts */
-    --text-font-prm: "Park";
-    --text-font-sdr: "Time New Roman", sans-serif;
-
-    --text-size-xxs: 0.8em;
-    --text-size-xs: 1em;
-    --text-size-s: 1.3em;
-    --text-size-m: 1.5em;
-    --text-size-l: 1.8em;
-    --text-size-xl: 2em;
 
     --text-weight-s: 100;
     --text-weight-m: 200;
     --text-weight-l: 400;
     --text-weight-xl: 600;
+
+
+    /* Radius */
+    --radius-3xs: 10px;
+    --radius-xxs: 25px;
+    --radius-xs: 50px;
+    --radius-s: 100px;
+    --radius-m: 150px;
+    --radius-l: 200px;
+    --radius-xl: 250px;
+    --radius-xxl: 300px;
+    --radius-3xl: 350px;
+    --radius-4xl: 400px;
+
 
     /* Projects */
     --box-height: 300px;
@@ -69,41 +84,28 @@
     --panel-height: 80%;
 
 
-    /* Global */
-    --transition-duration: 0.5s;
-    --radius-xs: 5px;
-    --radius-s: 10px;
-    --radius-m: 15px;
-    --radius-l: 20px;
-    --radius-xl: 25px;
+    /* Blur */
+    --blur-xs: 5px;
+    --blur-s: 10px;
+    --blur-m: 15px;
+    --blur-l: 20px;
+    --blur-xl: 25px;
+    --blur-xxl: 30px;
+    --blur-3xl: 35px;
+    --blur-4xl: 40px;
 
-    --blur-little: 3px;
-    --blur-medium: 13px;
-    --blur-big: 30px;
 
     /* Scroll params */
     --scroll-behavior: smooth;
     --scroll-margin-top: 200px;
 
-    /* Flexbox Utilities */
-    --flex-center: center;
-    --flex-start: start;
-    --flex-end: end;
-    --flex-between: space-between;
 
     /* Shadows */
-    --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.35);
-    --shadow-md: 0 0px 2px rgba(255, 255, 255, 0.25);
-    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.5);
-    --shadow-inset: inset 0px 5px 100px -90px rgba(0, 0, 0, 1);
-
-    /* Spacing */
-    --spacing-xs: 5%;
-    --spacing-sm: 7%;
-    --spacing-md: 10%;
-    --spacing-lg: 20%;
-    --spacing-xl: 30%;
-    --spacing-xxl: 50%;
+    --shadow-1: 0 2px 5px rgba(0, 0, 0, 0.35);
+    --shadow-2: 0 0px 2px rgba(255, 255, 255, 0.25);
+    --shadow-3: 0 10px 20px rgba(0, 0, 0, 0.5);
+    --shadow-inset-1: inset 0px 5px 100px -90px rgba(0, 0, 0, 1);
+    --shadow-inset-2: inset 0 -0.1em 0 transparent;
 }
 
 /* === Fonts === */
