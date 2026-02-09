@@ -118,6 +118,7 @@ header a {
     font-family: var(--a-font);
     font-weight: var(--a-weight);
     text-decoration: none;
+    color: var(--text-color);
 
     box-shadow: var(--shadow-inset-2);
     transition: var(--header-transition-1);

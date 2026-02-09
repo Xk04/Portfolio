@@ -125,7 +125,7 @@ header {
     z-index: 100;
 }
 
-header div {
+header nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
