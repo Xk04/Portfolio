@@ -63,7 +63,7 @@
         --scroll-margin-top: 150px;
     }
 
-    header div {
+    header nav {
         display: none;
     }
 }

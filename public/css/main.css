@@ -2,8 +2,6 @@
  * Define the default responsive.
  */
 
-
-
 /* === Main variables === */
 :root {
     /* Positions */
@@ -28,15 +26,20 @@
 
     /* About */
     --about-content-padding: 5%;
-    --about-content-gap: 50px;
+    --about-content-gap: 70px;
     --about-content-width: 80%;
     --about-p-size: var(--text-size-xs);
 
-    /* Img sizes */
-    --profile-img-size: 185px;
-    --fablab-img-size: 175px;
-    --college-img-size: 165px;
-    --link-sizes: 25px;
+    /* Projects */
+    --project-gap: 5%;
+    --project-top: 15%;
+    --project-right: 10%;
+    --project-bottom: 5%;
+    --project-left: 10%;
+    --project-padding: 1% 2%;
+    --project-content-gap: 3%;
+    --left-content-width: 37%;
+    --right-content-width: 60%;
 
     /* Footer */
     --links-gap: 30%;
@@ -44,6 +47,14 @@
     /* Title */
     --prm-size: 1em;
     --sdr-size: 0.55em;
+
+    /* Img sizes */
+    --profile-img-size: 185px;
+    --fablab-img-size: 175px;
+    --college-img-size: 165px;
+    --close-button-size: 30px;
+    --iframe-video-height: 300px;
+    --link-sizes: 25px;
 
     /* Text */
     --header-a-size: var(--text-size-s);
@@ -61,8 +72,6 @@
     --column-number: repeat(3, 1fr);
 }
 
-
-
 /* === HTML === */
 html {
     margin: 0;
@@ -73,8 +82,6 @@ html {
 
     scroll-behavior: var(--scroll-behavior);
 }
-
-
 
 /* === BODY === */
 body {
@@ -104,8 +111,6 @@ body.no-scroll {
     overflow: hidden;
 }
 
-
-
 /* === HEADER === */
 header {
     position: sticky;
@@ -116,7 +121,7 @@ header {
     padding: var(--header-padding);
 
     width: auto;
-    
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -137,8 +142,6 @@ header nav {
 header a {
     font-size: var(--header-a-size);
 }
-
-
 
 /* === Title === */
 h1 {
@@ -164,8 +167,6 @@ h1 span {
     letter-spacing: 0.02em;
 }
 
-
-
 /* === MAIN === */
 main {
     display: flex;
@@ -174,6 +175,7 @@ main {
 }
 
 section {
+    z-index: 98;
     scroll-margin-top: var(--scroll-margin-top);
 }
 
@@ -193,8 +195,6 @@ section p {
     scroll-margin-top: 0px;
 }
 
-
-
 /* === Arrow === */
 .arrow1 {
     margin: var(--arrow-1-margin);
@@ -204,7 +204,8 @@ section p {
     margin: var(--arrow-2-margin);
 }
 
-.arrow1, .arrow2 {
+.arrow1,
+.arrow2 {
     display: flex;
     justify-content: center;
 }
@@ -222,10 +223,8 @@ section p {
 
 .next-arrow {
     font-size: var(--arrow-size-symbol);
-    font-weight: var(--arrow-weight-symbol); 
+    font-weight: var(--arrow-weight-symbol);
 }
-
-
 
 /* === Presentation === */
 #presentation {
@@ -244,8 +243,6 @@ section p {
     font-size: var(--presentation-p);
 }
 
-
-
 /* === About === */
 #about {
     margin: var(--about-margin);
@@ -261,7 +258,7 @@ section p {
 
 .about-content {
     padding: var(--about-content-padding);
-    
+
     width: var(--about-content-width);
     height: auto;
 
@@ -270,17 +267,21 @@ section p {
     gap: var(--about-content-gap);
 }
 
-.profile, .fablab, .degree {
+.profile,
+.fablab,
+.degree {
     width: auto;
     height: auto;
     display: flex;
     gap: 5%;
 }
 
-.profile div, .fablab div, .degree div {
+.profile div,
+.fablab div,
+.degree div {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
 }
 
 .about-content h3 {
@@ -322,8 +323,6 @@ section p {
     height: var(--college-img-size);
 }
 
-
-
 /* === Project Preview === */
 #personal-projects {
     margin: var(--personal-projects-margin);
@@ -362,7 +361,7 @@ section p {
     font-size: var(--h3-size);
 }
 
-.description{
+.description {
     font-size: var(--preview-p-size);
 }
 
@@ -395,23 +394,95 @@ section p {
     font-size: var(--preview-p-size);
 }
 
-
-
 /* === Project === */
 .project {
-    display: none;
+    margin: 0;
+    padding: var(--project-padding);
+
     position: fixed;
+
+    inset: var(--project-top) var(--project-right) var(--project-bottom)
+        var(--project-left);
+
+    width: auto;
+    height: 80%;
+
+    z-index: 99;
+
+    display: none;
+    box-sizing: border-box;
+}
+
+.project.is-open {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: var(--project-gap);
+}
+
+.project-header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-header h3 {
+    font-size: var(--h2-size);
+}
+
+.project-header img {
+    padding: 1%;
+    width: var(--close-button-size);
+    height: var(--close-button-size);
+}
+
+.project-content {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: var(--project-content-gap);
+    min-height: 0;
+    overflow: hidden;
+}
+
+.left-content,
+.right-content {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.left-content iframe,
+.right-content iframe {
+    border-radius: var(--project-radius);
 }
 
 .left-content {
     overflow-y: scroll;
+    width: var(--left-content-width);
+}
+
+.left-content iframe {
+    width: 100%;
+    height: var(--iframe-video-height);
 }
 
 .right-content {
-    overflow-y: scroll;
+    overflow-y: hidden;
+    width: var(--right-content-width);
 }
 
-
+.right-content iframe {
+    width: 100%;
+    height: 100%;
+}
 
 /* === FOOTER === */
 footer {

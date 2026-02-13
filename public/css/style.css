@@ -3,8 +3,6 @@
  * The sizes, positions, ... components are coded in the responsive folder
  */
 
-
-
 :root {
     /* Animation */
     --animation-1: fadeInDown 0.5s ease forwards;
@@ -12,32 +10,30 @@
 
     /* Font */
     --h1-font: var(--font-1);
-    --h2-font: var(--font-2); 
+    --h2-font: var(--font-2);
     --h3-font: var(--font-4);
     --a-font: var(--font-3);
     --p-font: var(--font-4);
 
     /* Weight */
     --h1-weight: var(--title-weight-s);
-    --h2-weight: var(--text-weight-xl); 
+    --h2-weight: var(--text-weight-xl);
     --h3-weight: var(--text-weight-l);
     --a-weight: var(--text-weight-m);
     --p-weight: var(--text-weight-s);
 
     /* Transition */
     --header-transition-1: box-shadow 0.8s ease;
-    --project-transition-1: transform 0.4s;
+    --project-transition-1: 0.2s;
     --footer-transition-1: transform 0.3s;
 
     /* Presentation */
     --presentation-h2-font: var(--font-2);
     --presentation-h2-weight: var(--title-weight-xl);
 
-
     /* Blur */
     --header-blur: var(--blur-xs);
     --card-blur: var(--blur-4xl);
-
 
     /* Radius */
     --header-radius: var(--radius-m);
@@ -57,13 +53,10 @@
     --footer-background: rgba(255, 255, 255, 0.001);
 }
 
-
-
 /* === HTML === */
 html {
     color: var(--text-color);
 }
-
 
 /* === BODY === */
 body {
@@ -75,10 +68,26 @@ body::before {
     content: "";
 
     background:
-        radial-gradient(ellipse 140% 50% at 15% 60%, rgba(124, 58, 237, 0.11), transparent 55%),
-        radial-gradient(ellipse 120% 65% at 40% 90%, rgba(34, 197, 94, 0.13), transparent 60%),
-        radial-gradient(ellipse 100% 45% at 70% 5%, rgba(251, 191, 36, 0.07), transparent 50%),
-        radial-gradient(ellipse 80% 75% at 90% 80%, rgba(168, 85, 247, 0.10), transparent 62%),
+        radial-gradient(
+            ellipse 140% 50% at 15% 60%,
+            rgba(124, 58, 237, 0.11),
+            transparent 55%
+        ),
+        radial-gradient(
+            ellipse 120% 65% at 40% 90%,
+            rgba(34, 197, 94, 0.13),
+            transparent 60%
+        ),
+        radial-gradient(
+            ellipse 100% 45% at 70% 5%,
+            rgba(251, 191, 36, 0.07),
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse 80% 75% at 90% 80%,
+            rgba(168, 85, 247, 0.1),
+            transparent 62%
+        ),
         #000000;
 
     filter: blur(var(--blur-xxl));
@@ -90,8 +99,6 @@ body.no-scroll {
     overflow: hidden;
 }
 
-
-
 /* === MAIN === */
 section h2 {
     font-family: var(--h2-font);
@@ -102,8 +109,6 @@ section p {
     font-family: var(--p-font);
     font-weight: var(--p-weight);
 }
-
-
 
 /* === HEADER === */
 header {
@@ -120,7 +125,6 @@ header a {
     text-decoration: none;
     color: var(--text-color);
 
-    box-shadow: var(--shadow-inset-2);
     transition: var(--header-transition-1);
 }
 
@@ -132,8 +136,6 @@ header a:visited {
 header a:hover {
     box-shadow: var(--shadow-inset-2);
 }
-
-
 
 /* === Title === */
 h1 span {
@@ -150,8 +152,6 @@ h1 span {
     font-weight: var(--h1-weight);
 }
 
-
-
 /* === Presentation === */
 #presentation h2 {
     font-weight: var(--presentation-h2-weight);
@@ -163,12 +163,11 @@ h1 span {
 #presentation p {
     text-wrap: pretty;
     line-height: 1;
-} 
-
-
+}
 
 /* === Arrows === */
-.arrow1, .arrow2 {
+.arrow1,
+.arrow2 {
     animation: bounce 2s infinite;
 }
 
@@ -188,8 +187,6 @@ h1 span {
     line-height: 90%;
 }
 
-
-
 /* === About === */
 .about-content {
     background-color: var(--card-background);
@@ -201,7 +198,9 @@ h1 span {
     box-sizing: border-box;
 }
 
-.profile, .fablab, .degree {
+.profile,
+.fablab,
+.degree {
     box-sizing: border-box;
 }
 
@@ -249,8 +248,6 @@ h1 span {
     object-fit: cover;
 }
 
-
-
 /* === Project Preview === */
 .project-preview {
     color: var(--text-color-prm);
@@ -284,7 +281,7 @@ h1 span {
     line-height: 1;
 }
 
-.description{
+.description {
     font-family: var(--p-font);
     font-weight: var(--p-weight);
     overflow-y: hidden;
@@ -299,11 +296,49 @@ h1 span {
     font-style: italic;
 }
 
-
-
 /* === Project === */
-.project {}
+.project {
+    color: var(--text-color-prm);
 
+    background: var(--card-background);
+    backdrop-filter: blur(var(--card-blur));
+    -webkit-backdrop-filter: blur(var(--card-blur));
+
+    box-shadow: var(--shadow-2);
+
+    border-radius: var(--project-radius);
+    box-sizing: border-box;
+}
+
+.project-header h3 {
+    font-family: var(--h3-font);
+    font-weight: var(--h3-weight);
+    line-height: 1;
+}
+
+.project-header img {
+    background: none;
+    border: none;
+    border-radius: 90%;
+
+    transition-duration: var(--project-transition-1);
+}
+
+.project-header img:hover {
+    cursor: pointer;
+    background: var(--card-background);
+    backdrop-filter: blur(var(--card-blur));
+    -webkit-backdrop-filter: blur(var(--card-blur));
+
+    box-shadow: var(--shadow-2);
+    transition-duration: var(--project-transition-1);
+}
+
+.left-content p {
+    font-family: var(--p-font);
+    font-weight: var(--p-weight);
+    line-height: 1.6;
+}
 
 /* === FOOTER === */
 footer {
@@ -312,7 +347,8 @@ footer {
     backdrop-filter: blur(var(--blur-xxl));
 }
 
-footer p, footer a {
+footer p,
+footer a {
     font-family: var(--p-font);
     color: var(--text-color);
 }
