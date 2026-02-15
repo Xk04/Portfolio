@@ -2,10 +2,7 @@
  * Position, behaviors, sizes for a pad
  */
 
-
-
 @media (max-width: 430px) {
-
     :root {
         /* Positions */
         --presentation-margin: var(--spacing-4xl) 0% 0% 0%;
@@ -32,6 +29,19 @@
         --about-content-gap: 80px;
         --about-content-width: 95%;
         --about-p-size: var(--text-size-xs);
+
+        /* Projects */
+        --project-gap: 5%;
+        --project-top: 15%;
+        --project-right: 10%;
+        --project-bottom: 5%;
+        --project-left: 10%;
+        --project-padding: 1% 2%;
+        --project-content-gap: 20%;
+        --left-content-width: 100%;
+        --right-content-width: 100%;
+        --repo-width: 90%;
+        --repo-padding: 2%;
 
         /* Img sizes */
         --profile-img-size: 185px;
@@ -67,25 +77,56 @@
         display: none;
     }
 
-    .profile, .degree {
+    .profile,
+    .degree {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    
+
     .fablab {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
     }
 
-    .about-content h3, .about-content div {
+    .about-content h3,
+    .about-content div {
         justify-content: center;
         align-items: center;
     }
 
     .about-content div {
         text-align: center;
+    }
+
+    .project-content {
+        padding-bottom: 10%;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        gap: 10%;
+    }
+
+    .project-header {
+        padding: 10% 0% 0% 0%;
+        justify-content: end;
+    }
+
+    .project-header h3 {
+        display: none;
+    }
+
+    .left-content {
+        width: 100%;
+        height: auto;
+        overflow-y: visible;
+        display: block;
+    }
+
+    .left-content p {
+        margin: 15px 0;
+        line-height: 1.4;
     }
 
     footer {

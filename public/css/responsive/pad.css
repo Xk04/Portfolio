@@ -2,10 +2,7 @@
  * Position, behaviors, sizes for a pad
  */
 
-
-
 @media (max-width: 900px) {
-
     :root {
         /* Positions */
         --presentation-margin: var(--spacing-3xl) 0% 0% 0%;
@@ -65,5 +62,22 @@
 
     header nav {
         display: none;
+    }
+
+    .project-content {
+        padding-bottom: 10%;
+        flex-direction: column;
+        justify-content: center;
+        overflow-y: scroll;
+    }
+
+    .left-content,
+    .right-content {
+        display: block;
+        overflow-y: visible;
+    }
+
+    .left-content {
+        margin-top: 10%;
     }
 }

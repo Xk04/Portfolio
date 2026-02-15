@@ -16,14 +16,12 @@
     --background-color: #000000;
     --text-color: #d2d2d2;
 
-
     /* Fonts */
     --font-1: "Arimo";
     --font-2: "Lexend";
     --font-3: "Inter", sans-serif;
     --font-4: "Park";
     --font-5: "Time New Roman", sans-serif;
- 
 
     /* Font sizes */
     --title-size-xxs: 0.8em;
@@ -46,7 +44,6 @@
     --text-size-3xl: 4em;
     --text-size-4xl: 4.5em;
 
-    
     /* Font weights */
     --title-weight-xs: 100;
     --title-weight-s: 200;
@@ -58,7 +55,6 @@
     --text-weight-m: 200;
     --text-weight-l: 400;
     --text-weight-xl: 600;
-
 
     /* Radius */
     --radius-3xs: 10px;
@@ -72,7 +68,6 @@
     --radius-3xl: 350px;
     --radius-4xl: 400px;
 
-
     /* Projects */
     --box-height: 300px;
     --project-background-color: rgba(255, 255, 255, 0.06);
@@ -82,7 +77,6 @@
 
     --panel-width: 75%;
     --panel-height: 80%;
-
 
     /* Blur */
     --blur-xs: 5px;
@@ -94,11 +88,9 @@
     --blur-3xl: 35px;
     --blur-4xl: 40px;
 
-
     /* Scroll params */
     --scroll-behavior: smooth;
     --scroll-margin-top: 200px;
-
 
     /* Shadows */
     --shadow-1: 0 2px 5px rgba(0, 0, 0, 0.35);
@@ -134,16 +126,25 @@
     src: url("../fonts/Lexend-VariableFont_wght.ttf");
 }
 
-
 /* === Animations === */
 @keyframes gradientFlow {
-  0%   { background-position: 50% 30%; }
-  50%  { background-position: 50% 60%; }
-  100% { background-position: 50% 30%; }
+    0% {
+        background-position: 50% 30%;
+    }
+    50% {
+        background-position: 50% 60%;
+    }
+    100% {
+        background-position: 50% 30%;
+    }
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateY(0);
     }
     40% {
@@ -165,7 +166,6 @@
     }
 }
 
-
 /* === Global classes === */
 .reveal {
     opacity: 0;
@@ -182,4 +182,23 @@
     background-color: rgba(70, 58, 237, 0.15);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     color: rgb(233, 255, 247);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: none;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.3);
 }

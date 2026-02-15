@@ -2,10 +2,7 @@
  * Position, behaviors, sizes for a medium screen
  */
 
-
-
 @media (max-width: 1024px) {
-
     :root {
         /* Positions */
         --presentation-margin: var(--spacing-xxl) 0% 0% 0%;
@@ -33,11 +30,16 @@
         --about-content-width: 90%;
         --about-p-size: var(--text-size-xs);
 
-        /* Img sizes */
-        --profile-img-size: 185px;
-        --fablab-img-size: 175px;
-        --college-img-size: 165px;
-        --link-sizes: 25px;
+        /* Projects */
+        --project-gap: 5%;
+        --project-top: 15%;
+        --project-right: 10%;
+        --project-bottom: 5%;
+        --project-left: 10%;
+        --project-padding: 1% 2%;
+        --project-content-gap: 5%;
+        --left-content-width: 100%;
+        --right-content-width: 100%;
 
         /* Footer */
         --links-gap: 30%;
@@ -45,6 +47,12 @@
         /* Title */
         --prm-size: 1em;
         --sdr-size: 0.55em;
+
+        /* Img sizes */
+        --profile-img-size: 185px;
+        --fablab-img-size: 175px;
+        --college-img-size: 165px;
+        --link-sizes: 25px;
 
         /* Text */
         --header-a-size: var(--text-size-s);
@@ -61,5 +69,16 @@
         /* Other */
         --column-number: repeat(2, 1fr);
         --scroll-margin-top: 150px;
+    }
+
+    .project-content {
+        padding-bottom: 10%;
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+
+    .left-content,
+    .right-content {
+        overflow-y: visible;
     }
 }
