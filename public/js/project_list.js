@@ -171,10 +171,10 @@ let collegeProjects = [
           - Tools,<br>
           - Builders,<br>
           - Addition, Substraction, Multiplications,<br>
-          - Integrals and Derivaties for polynomials,<br>
+          - Integrals and Derivatives for polynomials,<br>
           - Single point evaluation<br>
-      The most meaningfull part was the test framework creation.
-      It was my first design conception ! Since this project I started to understand why
+      The most meaningful part was the test framework creation.
+      It was my first software design ! Since this project I started to understand why
       frameworks and library structures are so important.
       </p>
     `,
