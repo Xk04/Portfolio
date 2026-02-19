@@ -275,6 +275,7 @@ section p {
     width: auto;
     height: auto;
     display: flex;
+    align-items: center;
     gap: 5%;
 }
 
@@ -307,7 +308,7 @@ section p {
 /* --- FabLab --- */
 .fablab div {
     align-items: end;
-    text-align: end;
+    text-align: start;
 }
 
 .fablab img {

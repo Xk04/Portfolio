@@ -1,6 +1,29 @@
 // ==== Personal Projects ====
 
 let personalProjects = [
+  // jAI
+  new Preview(
+    "public/images/preview/jAI.png",
+    "AI package - jAI",
+    "Project in progress...",
+    "~ /2026",
+    "Alone",
+  ),
+  new Project(
+    "AI package - jAI",
+    `
+      <p>
+
+      </p>
+    `,
+    `
+    <a class="repo"  target="_blank" rel="noopener">
+      <img src="public/images/icons/github.png" alt="">
+      <p>The repository is not available yet</p>
+    </a>
+    `,
+  ),
+
   // Tank
   new Preview(
     "public/images/preview/tank.png",
@@ -28,7 +51,7 @@ let personalProjects = [
   new Preview(
     "public/videos/preview/tiny_bot.gif",
     "Autonomous Robot — Yahboom Tiny Bot",
-    "",
+    "Able to make choices based on signage",
     "06/2025",
     "Fabrication Lab",
   ),
@@ -46,13 +69,38 @@ let personalProjects = [
 // ==== College Projects ====
 
 let collegeProjects = [
+  // Compiler
+  new Preview(
+    "public/images/preview/mycompiler.png",
+    "Compiler - MyCompiler",
+    `
+      Project in progress...
+    `,
+    "~ /2026",
+    "Compilation",
+  ),
+  new Project(
+    "Creating a Compiler - MyCompiler",
+    `
+      <p>
+
+      </p>
+    `,
+    `
+    <a class="repo" target="_blank" rel="noopener">
+      <img src="public/images/icons/github.png" alt="">
+      <p>The repository is not available yet</p>
+    </a>
+    `,
+  ),
+
   // Game Engine
   new Preview(
     "public/images/preview/game_engine2.png",
     "Game Engine in Java",
     `
-            MVC/EC structure to create platformer games.
-        `,
+    MVC/EC structure to create platformer games.
+    `,
     "01/2026",
     "OOP course",
   ),
@@ -119,7 +167,15 @@ let collegeProjects = [
     `
       <img src="public/images/repo/schema_tests.png">
       <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      This 1 month project provides 23 polynomial functions for a R library:<br>
+          - Tools,<br>
+          - Builders,<br>
+          - Addition, Substraction, Multiplications,<br>
+          - Integrals and Derivaties for polynomials,<br>
+          - Single point evaluation<br>
+      The most meaningfull part was the test framework creation.
+      It was my first design conception ! Since this project I started to understand why
+      frameworks and library structures are so important.
       </p>
     `,
     `
