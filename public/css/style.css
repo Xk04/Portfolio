@@ -18,13 +18,13 @@
     /* Weight */
     --h1-weight: var(--title-weight-s);
     --h2-weight: var(--text-weight-xl);
-    --h3-weight: var(--text-weight-l);
+    --h3-weight: var(--text-weight-xl);
     --a-weight: var(--text-weight-m);
-    --p-weight: var(--text-weight-s);
+    --p-weight: var(--text-weight-l);
 
     /* Transition */
     --header-transition-1: box-shadow 0.8s ease;
-    --project-transition-1: 0.2s;
+    --project-transition-1: 0.4s;
     --project-transition-2: transform 0.5s;
     --footer-transition-1: transform 0.3s;
 
@@ -34,7 +34,7 @@
 
     /* Blur */
     --header-blur: var(--blur-xs);
-    --card-blur: var(--blur-4xl);
+    --card-blur: var(--blur-3xl);
 
     /* Radius */
     --header-radius: var(--radius-m);
@@ -51,7 +51,6 @@
 
     /* Backgrounds */
     --card-background: rgba(255, 255, 255, 0.03);
-    --footer-background: rgba(255, 255, 255, 0.001);
 }
 
 /* === HTML === */
@@ -63,39 +62,8 @@ html {
 
 /* === BODY === */
 body {
-    background-color: var(--background-color);
     overflow-x: hidden;
-}
-
-body::before {
-    content: "";
-
-    background:
-        radial-gradient(
-            ellipse 140% 50% at 15% 60%,
-            rgba(124, 58, 237, 0.11),
-            transparent 55%
-        ),
-        radial-gradient(
-            ellipse 120% 65% at 40% 90%,
-            rgba(34, 197, 94, 0.13),
-            transparent 60%
-        ),
-        radial-gradient(
-            ellipse 100% 45% at 70% 5%,
-            rgba(251, 191, 36, 0.07),
-            transparent 50%
-        ),
-        radial-gradient(
-            ellipse 80% 75% at 90% 80%,
-            rgba(168, 85, 247, 0.1),
-            transparent 62%
-        ),
-        #000000;
-
-    filter: blur(var(--blur-xxl));
-    background-size: 100% 160%;
-    animation: var(--body-animation);
+    background-color: var(--background-color);
 }
 
 body.no-scroll {
@@ -111,6 +79,7 @@ section h2 {
 section p {
     font-family: var(--p-font);
     font-weight: var(--p-weight);
+    line-height: 1.4;
 }
 
 /* === HEADER === */
@@ -287,16 +256,12 @@ h1 span {
 .description {
     font-family: var(--p-font);
     font-weight: var(--p-weight);
+    font-style: italic;
     overflow-y: hidden;
 }
 
 .learn-more p {
     font-family: var(--p-font);
-    font-style: italic;
-}
-
-.click-info {
-    font-style: italic;
 }
 
 /* === Project === */
@@ -337,6 +302,13 @@ h1 span {
     transition-duration: var(--project-transition-1);
 }
 
+.project-content a {
+    font-family: var(--p-font);
+    font-weight: var(--p-weight);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
 .left-content iframe,
 .left-content img {
     opacity: var(--about-img-opacity);
@@ -344,7 +316,8 @@ h1 span {
     border-radius: var(--radius-3xs);
 }
 
-.left-content p {
+.left-content p,
+.right-content p {
     font-family: var(--p-font);
     font-weight: var(--p-weight);
     line-height: 1.6;
@@ -370,9 +343,7 @@ h1 span {
 
 /* === FOOTER === */
 footer {
-    background-color: var(--footer-background);
     box-sizing: border-box;
-    backdrop-filter: blur(var(--blur-xxl));
 }
 
 footer p,
