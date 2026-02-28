@@ -102,7 +102,7 @@ let collegeProjects = [
   // Game Engine
   new Preview(
     "public/images/preview/game_engine2.png",
-    "Game Engine in Java",
+    "Game Engine",
     `
     MVC/EC structure to create platformer games.
     `,

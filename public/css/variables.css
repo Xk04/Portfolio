@@ -13,8 +13,8 @@
     --spacing-4xl: 60%;
 
     /* Colors */
-    --background-color: #05050d;
-    --text-color: #bababa;
+    --background-color: #0f0f30;
+    --text-color: #fafaff;
 
     /* Fonts */
     --font-1: "Arimo";
@@ -181,9 +181,9 @@
 }
 
 ::selection {
-    background-color: rgba(70, 58, 237, 0.15);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-    color: rgb(233, 255, 247);
+    /*background-color: rgba(70, 58, 237, 0.15);*/
+    background-color: rgba(255, 251, 0, 0.3);
+    color: #e6e6e6;
 }
 
 ::-webkit-scrollbar {
