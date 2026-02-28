@@ -132,9 +132,16 @@ h1 span {
     line-height: 0.5;
 }
 
+#presentation h2 span {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
 #presentation p {
+    color: rgba(255, 238, 0, 0.7);
+    text-shadow: var(--shadow-2);
     text-wrap: pretty;
-    line-height: 1;
+    line-height: 1.5;
 }
 
 /* === Arrows === */
@@ -174,6 +181,14 @@ h1 span {
 .fablab,
 .degree {
     box-sizing: border-box;
+}
+
+.profile h3,
+.fablab h3,
+.degree h3 {
+    color: var(--text-color-sdn);
+    -webkit-text-stroke: 1px rgba(242, 213, 0, 0.5);
+    text-shadow: var(--shadow-2);
 }
 
 .about-content h3 {

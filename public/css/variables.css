@@ -15,6 +15,7 @@
     /* Colors */
     --background-color: #0f0f30;
     --text-color: #fafaff;
+    --text-color-sdn: rgba(242, 213, 0, 0.5);
 
     /* Fonts */
     --font-1: "Arimo";
@@ -168,6 +169,17 @@
     }
 }
 
+@keyframes slideIn {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
 /* === Global classes === */
 .reveal {
     opacity: 0;
@@ -180,10 +192,15 @@
     transform: translateY(0);
 }
 
+.highlight-bar {
+    display: inline-block;
+    animation: slideIn 0.7s ease-out;
+}
+
 ::selection {
-    /*background-color: rgba(70, 58, 237, 0.15);*/
-    background-color: rgba(255, 251, 0, 0.3);
-    color: #e6e6e6;
+    background-color: rgba(255, 238, 0, 0.4);
+    color: rgba(255, 255, 255, 1);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
 }
 
 ::-webkit-scrollbar {
