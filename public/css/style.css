@@ -23,7 +23,7 @@
     --p-weight: var(--text-weight-l);
 
     /* Transition */
-    --header-transition-1: box-shadow 0.8s ease;
+    --header-transition-1: box-shadow 0.6s ease;
     --project-transition-1: 0.4s;
     --project-transition-2: transform 0.5s;
     --footer-transition-1: transform 0.3s;
@@ -92,6 +92,7 @@ header {
 }
 
 header a {
+    padding-bottom: 4px;
     font-family: var(--a-font);
     font-weight: var(--a-weight);
     text-decoration: none;
