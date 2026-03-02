@@ -3,8 +3,6 @@ class App {
     this.previews = document.querySelectorAll(".project-preview");
     this.projects = document.querySelectorAll(".project");
     this.closeBtns = document.querySelectorAll(".close-project");
-    this.age = document.getElementById("age");
-    this.date = new Date();
   }
 
   init() {
@@ -12,19 +10,7 @@ class App {
       window.scrollTo(0, 0);
       history.replaceState(null, null, " ");
     }
-    this.setAge();
     this.setUpEvents();
-  }
-
-  setAge() {
-    let day = this.date.getDate();
-    let month = this.date.getMonth() + 1;
-    let year = this.date.getFullYear();
-    let yo = year - 2005;
-    if (!(month >= 2 && day >= 23)) {
-      yo -= 1;
-    }
-    this.age.textContent = yo;
   }
 
   smoothScroll() {
@@ -69,7 +55,7 @@ class App {
     // Fermer un projet
     this.closeBtns.forEach((btn, i) => {
       btn.addEventListener("click", (e) => {
-        e.stopPropagation(); // Évite les bugs de clics superposés
+        e.stopPropagation();
         this.projects[i].classList.remove("is-open");
         document.body.classList.remove("no-scroll");
       });
