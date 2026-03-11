@@ -130,7 +130,7 @@ h1 span {
     font-weight: var(--presentation-h2-weight);
     font-family: var(--presentation-h2-font);
     letter-spacing: -0.04em;
-    line-height: 0.5;
+    line-height: 0.8;
 }
 
 #presentation h2 span {
@@ -308,7 +308,8 @@ h1 span {
     transition-duration: var(--project-transition-1);
 }
 
-.project-header img:hover {
+.project-header img:hover,
+.project-header img:active {
     cursor: pointer;
     background: var(--card-background);
     backdrop-filter: blur(var(--card-blur));

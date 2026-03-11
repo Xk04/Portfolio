@@ -2,15 +2,15 @@
  * Position, behaviors, sizes for a medium screen
  */
 
-@media (max-width: 1024px) {
+@media (max-width: 1300px) {
     :root {
         /* Positions */
-        --presentation-margin: var(--spacing-xxl) 0% 0% 0%;
-        --arrow-1-margin: var(--spacing-l) 0% 0% 0%;
+        --presentation-margin: var(--spacing-xl) 0% 0% 0%;
+        --arrow-1-margin: var(--spacing-s) 0% 0% 0%;
         --about-margin: var(--spacing-3xl) 0% 0% 0%;
         --arrow-2-margin: var(--spacing-s) 0% 0% 0%;
         --personal-projects-margin: var(--spacing-xxl) 0% 0% 0%;
-        --college-projects-margin: var(--spacing-xs) 0% 10% 0%;
+        --college-projects-margin: var(--spacing-m) 0% 10% 0%;
         --footer-margin: var(--spacing-xxl) 0% 0% 0%;
 
         /* Body */
@@ -18,11 +18,11 @@
 
         /* Header */
         --header-padding: var(--spacing-3xs);
-        --header-gap: 50px;
+        --header-gap: 100px;
 
         /* Presentation */
-        --presentation-h2: 5em;
-        --presentation-p: var(--text-size-s);
+        --presentation-h2: 7em;
+        --presentation-p: var(--text-size-l);
 
         /* About */
         --about-content-padding: 5%;
@@ -40,6 +40,8 @@
         --project-content-gap: 5%;
         --left-content-width: 100%;
         --right-content-width: 100%;
+        --repo-width: 60%;
+        --repo-padding: 2% 0%;
 
         /* Footer */
         --links-gap: 30%;
@@ -52,6 +54,7 @@
         --profile-img-size: 185px;
         --fablab-img-size: 175px;
         --college-img-size: 165px;
+        --iframe-video-height: 600px;
         --link-sizes: 25px;
 
         /* Text */

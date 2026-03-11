@@ -93,7 +93,7 @@ let personalProjects = [
     </p>
     `,
     `
-      <a href="https://www.canva.com/design/DAGojOKnQJc/a5PDoHsTN3Pe8AiHZA6tEQ/view?utm_content=DAGojOKnQJc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7383905023" target="_blank" rel="noopener">Explanations in few slides (french version)</a>
+      <a class="repo" href="https://www.canva.com/design/DAGojOKnQJc/a5PDoHsTN3Pe8AiHZA6tEQ/view?utm_content=DAGojOKnQJc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7383905023" target="_blank" rel="noopener">Explanations in few slides (french version)</a>
     `,
   ),
 ];

@@ -2,19 +2,19 @@
  * Position, behaviors, sizes for a pad
  */
 
-@media (max-width: 430px) {
+@media (max-width: 500px) {
     :root {
         /* Positions */
-        --presentation-margin: var(--spacing-4xl) 0% 0% 0%;
+        --presentation-margin: var(--spacing-3xl) 0% 0% 0%;
         --arrow-1-margin: var(--spacing-l) 0% 0% 0%;
         --about-margin: 100% 0% 0% 0%;
         --arrow-2-margin: var(--spacing-l) 0% 0% 0%;
         --personal-projects-margin: 80% 0% 0% 0%;
-        --college-projects-margin: var(--spacing-xl) 0% 50% 0%;
-        --footer-margin: var(--spacing-xxl) 0% 0% 0%;
+        --college-projects-margin: var(--spacing-4xl) 0% 130% 0%;
+        --footer-margin: 0%;
 
         /* Body */
-        --body-margin: 0 var(--spacing-xs);
+        --body-margin: 0 var(--spacing-xxs);
 
         /* Header */
         --header-padding: var(--spacing-3xs);
@@ -27,11 +27,11 @@
         /* About */
         --about-content-padding: 10% 5%;
         --about-content-gap: 80px;
-        --about-content-width: 95%;
+        --about-content-width: 100%;
         --about-p-size: var(--text-size-xs);
 
         /* Projects */
-        --project-gap: 5%;
+        --project-gap: 0%;
         --project-top: 15%;
         --project-right: 10%;
         --project-bottom: 5%;
@@ -98,6 +98,10 @@
 
     .about-content div {
         text-align: center;
+    }
+
+    .degree div p {
+        text-align: start;
     }
 
     .project-content {
