@@ -1,15 +1,14 @@
 class Preview {
-    constructor(imageUrl, title, description, date, info) {
-        this.imageUrl = imageUrl;
-        this.title = title;
-        this.description = description;
-        this.date = date;
-        this.info = info;
-    }
+  constructor(imageUrl, title, description, date, info) {
+    this.imageUrl = imageUrl;
+    this.title = title;
+    this.description = description;
+    this.date = date;
+    this.info = info;
+  }
 
-    getCode() {
-        return (
-            `
+  getCode() {
+    return `
             <div class="project-preview reveal">
                 <img loading="lazy" src="${this.imageUrl}" alt="">
                 <div class="project-preview-content">
@@ -21,7 +20,6 @@ class Preview {
                     </div>
                 </div>
             </div>
-            `
-        );
-    }
+            `;
+  }
 }

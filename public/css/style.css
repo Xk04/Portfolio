@@ -280,6 +280,12 @@ h1 span {
     font-family: var(--p-font);
 }
 
+.click-info {
+    color: var(--text-color-sdn);
+    -webkit-text-stroke: 1px rgba(242, 213, 0, 0.5);
+    text-shadow: var(--shadow-2);
+}
+
 /* === Project === */
 .project {
     color: var(--text-color-prm);
