@@ -52,7 +52,7 @@ let personalProjects = [
       <p>
           During one semester I had the opportunity to develop the software part for a robot with the Fablab of Nice Côte d'Azur University.<br>
           Then I worked on a <a href="https://www.yahboom.net/study/G1-T-PI" target="_blank" rel="noopener">Yahboom G1 AI vision</a> bot.<br>
-          I had to deal with network conditions, and the robot performances. This robot is equipped with a Raspberry Pi (Pi OS) and WiFi connection.<br>
+          I had to deal with network conditions, and the robot performances. This robot is equipped with a Raspberry Pi 4 model B (Pi OS) and WiFi connection.<br>
           For more mobility, I choose to create a web interface (secured with <a href="https://tailscale.com/" target="_blank" rel="noopener">Tailscale</a>).
           Thanks to this interface the user and the robot can communicate !
       </p>
