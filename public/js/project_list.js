@@ -41,7 +41,7 @@ let personalProjects = [
   new Preview(
     "public/images/preview/tank.jpg",
     "Autonomous Robot v.2",
-    "Motorization in progress...",
+    "2D Mapping in progress...",
     "~ /2026",
     "Fabrication Lab",
   ),
