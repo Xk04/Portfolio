@@ -104,27 +104,28 @@ let collegeProjects = [
   // Compiler
   new Preview(
     "public/images/preview/mycompiler.png",
-    "Creating a Compiler",
+    "Mini C Compiler",
     `
-      Project in progress...
+      Lex & Yacc tools
     `,
-    "~ /2026",
+    "05/2026",
     "Compilation course",
   ),
   new Project(
-    "Creating a Compiler - MyCompiler",
+    "Mini C Compiler - STRUCIT",
     `
       <p>
-          My teammate and I are currently building a compiler for a sublanguage of C.<br>
-          The goal is to apply and understand the concepts seen in lectures.<br>
-          We are also using Lex and Yacc tools for the code analysis.<br>
-          The project will be available on a public repository soon.
+          In few months, we build a compiler in order to translate a sublanguage of C<br>
+          to generate a 3-address code (with labels, go-to, ...).<br>
+          In this project we worked on the lexical analysis (Lex), the syntaxic analysis (Yacc),<br>
+          the symbol table API and the type system.
+          Pipeline : STRUCIT Frontend -> Compiler -> STRUCIT Backend
       </p>
     `,
     `
-    <a class="repo" target="_blank" rel="noopener">
+    <a class="repo" href="https://github.com/Xk04/Mini-C-Compiler" target="_blank" rel="noopener">
       <img src="public/images/icons/github.png" alt="">
-      <p>The repository is not available yet</p>
+      <p>For more details, go to the repository here</p>
     </a>
     `,
   ),
