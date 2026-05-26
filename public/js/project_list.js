@@ -118,7 +118,7 @@ let collegeProjects = [
           In few months, we build a compiler in order to translate a sublanguage of C<br>
           to generate a 3-address code (with labels, go-to, ...).<br>
           In this project we worked on the lexical analysis (Lex), the syntaxic analysis (Yacc),<br>
-          the symbol table API and the type system.
+          the symbol table API and the type system.<br>
           Pipeline : STRUCIT Frontend -> Compiler -> STRUCIT Backend
       </p>
     `,
